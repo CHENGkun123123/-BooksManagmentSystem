@@ -76,5 +76,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookBLL\BookBLL.csproj">
+      <Project>{f27cd73a-4a2e-4804-866f-b2a52ecbb62d}</Project>
+      <Name>BookBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookModel\BookModel.csproj">
+      <Project>{a5ca6733-dc12-4f38-a48a-599006225e76}</Project>
+      <Name>BookModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{84e375eb-44c5-4806-928b-6cdf3de0e623}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

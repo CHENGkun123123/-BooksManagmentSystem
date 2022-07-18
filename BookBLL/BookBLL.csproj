@@ -43,5 +43,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookModel\BookModel.csproj">
+      <Project>{a5ca6733-dc12-4f38-a48a-599006225e76}</Project>
+      <Name>BookModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\BookDAL.csproj">
+      <Project>{457ca17e-f9c6-47b8-9c7a-60b76af86636}</Project>
+      <Name>BookDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
