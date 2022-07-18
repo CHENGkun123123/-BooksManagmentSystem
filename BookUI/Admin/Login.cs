@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CCWin;
 
 namespace BookUI
 {
-    public partial class Form1 : Form
+    public partial class Login : Skin_VS
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
