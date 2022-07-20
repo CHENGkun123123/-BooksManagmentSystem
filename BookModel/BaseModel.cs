@@ -15,6 +15,14 @@ namespace BookModel
         public BaseModel()
         {
         }
+        /// <summary>
+        /// 构造方法重载
+        /// </summary>
+        /// <param name="id"></param>
+        public BaseModel(int id)
+        {
+            _id = id;
+        }
 
         private int _id;
 

@@ -80,7 +80,7 @@ namespace Common.Helper
         }
 
         /// <summary>
-        /// 执行查询方法
+        /// 执行DataTable查询方法
         /// </summary>
         /// <param name="sql">sql语句</param>
         /// <param name="pars">可变参数</param>
@@ -93,6 +93,7 @@ namespace Common.Helper
                 //创建适配器对象
                 using (SqlDataAdapter sda = new SqlDataAdapter(sql, conn))
                 {
+                    
                     //创建数据表接收查询结果集
                     DataSet ds = new DataSet();
                     //判断参数是否为空
@@ -107,6 +108,40 @@ namespace Common.Helper
                     return ds.Tables["table"];
                 }
 
+            }
+        }
+
+        /// <summary>
+        /// 使用DataReader方式读取数据
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <param name="pars">可变参数</param>
+        /// <returns></returns>
+        public static void ExecuteDataReader(string sql, params SqlParameter[] pars)
+        {
+            //创建连接对象
+            using (SqlConnection conn = new SqlConnection(ConnString))
+            {
+                //打开连接
+                conn.Open();
+                //创建command连接对象
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    //判断参数是否为空
+                    if (pars != null)
+                    {
+                        //添加参数
+                        cmd.Parameters.AddRange(pars);
+                    }
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        //判断是否有数据
+                        if (reader.HasRows)
+                        {
+                            reader.Read();
+                        }
+                    }
+                }
             }
         }
 

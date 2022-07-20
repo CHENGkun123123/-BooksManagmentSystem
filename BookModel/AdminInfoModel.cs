@@ -16,6 +16,17 @@ namespace BookModel
         {
 
         }
+        /// <summary>
+        /// 构造方法重载
+        /// </summary>
+        /// <param name="adminID"></param>
+        /// <param name="adminPwd"></param>
+        public AdminInfoModel(string adminID, string adminPwd)
+        {
+            _adminID = adminID;
+            _adminPwd = adminPwd;
+        }
+
         #region 字段
         private string _adminID;
         private string _adminPwd;

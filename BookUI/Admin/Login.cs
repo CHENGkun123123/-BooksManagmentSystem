@@ -11,13 +11,17 @@ using BookBLL;
 using BookModel;
 using CCWin;
 using Common.Enum;
+using Common.Tools;
 
 namespace BookUI
 {
+    /// <summary>
+    /// 登录窗体
+    /// </summary>
     public partial class Login : Skin_VS
     {
         /// <summary>
-        /// 登录窗体初始化
+        /// 默认构造方法
         /// </summary>
         public Login()
         {
@@ -31,7 +35,8 @@ namespace BookUI
         /// <param name="e"></param>
         private void AdminIdChk_Enter(object sender, EventArgs e)
         {
-            if (AdminIdChk.Text == "点击输入用户名")
+            //判断控件Text内容
+            if (AdminIdChk.Text == EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultNameErr))
             {
                 AdminIdChk.Text = null;
             }
@@ -45,9 +50,10 @@ namespace BookUI
         /// <param name="e"></param>
         private void AdminIdChk_Leave(object sender, EventArgs e)
         {
-            if (AdminIdChk.Text.Length == (int)AdminInfoEnum.TextLength)
+            //判断控件Text内容
+            if (AdminIdChk.Text.Length == (int)JudgeEnum.Default_State)
             {
-                AdminIdChk.Text = "点击输入用户名";
+                AdminIdChk.Text = EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultNameErr);
                 AdminIdChk.ForeColor = Color.DimGray;
             }
 
@@ -60,7 +66,8 @@ namespace BookUI
         /// <param name="e"></param>
         private void AdminPwdChk_Enter(object sender, EventArgs e)
         {
-            if (AdminPwdChk.Text == "点击输入密码")
+            //判断控件Text内容
+            if (AdminPwdChk.Text == EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultPwdErr))
             {
                 AdminPwdChk.Text = null;
                 AdminPwdChk.IsSystemPasswordChar = true;
@@ -75,9 +82,10 @@ namespace BookUI
         /// <param name="e"></param>
         private void AdminPwdChk_Leave(object sender, EventArgs e)
         {
-            if (AdminPwdChk.Text.Length == (int)AdminInfoEnum.TextLength)
+            //判断控件Text内容
+            if (AdminPwdChk.Text.Length == (int)JudgeEnum.Default_State)
             {
-                AdminPwdChk.Text = "点击输入密码";
+                AdminPwdChk.Text = EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultPwdErr);
                 AdminPwdChk.IsSystemPasswordChar = false;
                 AdminPwdChk.ForeColor = Color.DimGray;
             }
@@ -89,24 +97,11 @@ namespace BookUI
         /// <param name="e"></param>
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            AdminInfoModel admin = new AdminInfoModel
-            {
-                AdminID = AdminIdChk.Text,
-                AdminPwd = AdminPwdChk.Text
-            };
-
-            if (string.IsNullOrEmpty(admin.AdminPwd) || AdminIdChk.Text == "点击输入用户名")
-            {
-                MessageBox.Show("请输入账号！");
-            }
-            else if (string.IsNullOrEmpty(admin.AdminID) || AdminPwdChk.Text == "点击输入密码")
-            {
-                MessageBox.Show("请输入密码！");
-            }
-            else
-            {
-                MessageBox.Show(new AdminInfoBLL().Login(admin));
-            }
+            //赋值
+            AdminInfoModel admin = new AdminInfoModel(AdminIdChk.Text, AdminPwdChk.Text);
+            //输出登录信息
+            MessageBox.Show(EnumHelper.GetDescription<Enum>(new AdminInfoBLL().Login(admin)));
         }
+
     }
 }
