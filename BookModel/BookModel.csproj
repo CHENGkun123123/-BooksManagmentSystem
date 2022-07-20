@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="AdminInfoModel.cs" />
     <Compile Include="BaseModel.cs" />
+    <Compile Include="BookCategoryModel.cs" />
+    <Compile Include="BookInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
