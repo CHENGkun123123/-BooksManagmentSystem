@@ -1,11 +1,6 @@
 ﻿using Common.Helper;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL
 {
@@ -22,7 +17,7 @@ namespace DAL
         {
             string sql = "SELECT * FROM BookCategory WHERE ParentID!=@Parentid";
 
-            SqlParameter par = new SqlParameter("@Parentid","0");//父级id
+            SqlParameter par = new SqlParameter("@Parentid", "0");//父级id
 
             return SqlDBHelper.ExecuteDataTable(sql, par);
         }

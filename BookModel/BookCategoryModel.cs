@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookModel
+﻿namespace BookModel
 {
     /// <summary>
     /// 图书类型表实体类

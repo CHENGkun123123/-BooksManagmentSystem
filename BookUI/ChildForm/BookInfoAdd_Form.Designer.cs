@@ -29,123 +29,123 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.BookNamechk = new CCWin.SkinControl.SkinTextBox();
-            this.BookNamelbl = new CCWin.SkinControl.SkinLabel();
-            this.BookAuthorchk = new CCWin.SkinControl.SkinTextBox();
-            this.BookAuthorlbl = new CCWin.SkinControl.SkinLabel();
+            this.BookName_tb = new CCWin.SkinControl.SkinTextBox();
+            this.lbl_BookName_tb = new CCWin.SkinControl.SkinLabel();
+            this.BookAuthor_tb = new CCWin.SkinControl.SkinTextBox();
+            this.lbl_BookAuthor_tb = new CCWin.SkinControl.SkinLabel();
             this.BookPricelbl = new CCWin.SkinControl.SkinLabel();
             this.BookCategorylbl = new CCWin.SkinControl.SkinLabel();
             this.BookAddBtn = new CCWin.SkinControl.SkinButton();
             this.BookCategorycbo = new CCWin.SkinControl.SkinComboBox();
-            this.BookPricenud = new CCWin.SkinControl.SkinNumericUpDown();
+            this.BookPricenud = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.BookPricenud)).BeginInit();
             this.SuspendLayout();
             // 
-            // BookNamechk
+            // BookName_tb
             // 
-            this.BookNamechk.BackColor = System.Drawing.Color.Transparent;
-            this.BookNamechk.DownBack = null;
-            this.BookNamechk.Icon = null;
-            this.BookNamechk.IconIsButton = false;
-            this.BookNamechk.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.BookNamechk.IsPasswordChat = '\0';
-            this.BookNamechk.IsSystemPasswordChar = false;
-            this.BookNamechk.Lines = new string[0];
-            this.BookNamechk.Location = new System.Drawing.Point(240, 136);
-            this.BookNamechk.Margin = new System.Windows.Forms.Padding(0);
-            this.BookNamechk.MaxLength = 32767;
-            this.BookNamechk.MinimumSize = new System.Drawing.Size(28, 28);
-            this.BookNamechk.MouseBack = null;
-            this.BookNamechk.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.BookNamechk.Multiline = false;
-            this.BookNamechk.Name = "BookNamechk";
-            this.BookNamechk.NormlBack = null;
-            this.BookNamechk.Padding = new System.Windows.Forms.Padding(5);
-            this.BookNamechk.ReadOnly = false;
-            this.BookNamechk.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.BookNamechk.Size = new System.Drawing.Size(185, 28);
-            // 
-            // 
-            // 
-            this.BookNamechk.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BookNamechk.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BookNamechk.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.BookNamechk.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.BookNamechk.SkinTxt.Name = "BaseText";
-            this.BookNamechk.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.BookNamechk.SkinTxt.TabIndex = 0;
-            this.BookNamechk.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.BookNamechk.SkinTxt.WaterText = "";
-            this.BookNamechk.TabIndex = 0;
-            this.BookNamechk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BookNamechk.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.BookNamechk.WaterText = "";
-            this.BookNamechk.WordWrap = true;
-            // 
-            // BookNamelbl
-            // 
-            this.BookNamelbl.AutoSize = true;
-            this.BookNamelbl.BackColor = System.Drawing.Color.Transparent;
-            this.BookNamelbl.BorderColor = System.Drawing.Color.White;
-            this.BookNamelbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BookNamelbl.Location = new System.Drawing.Point(168, 143);
-            this.BookNamelbl.Name = "BookNamelbl";
-            this.BookNamelbl.Size = new System.Drawing.Size(59, 17);
-            this.BookNamelbl.TabIndex = 1;
-            this.BookNamelbl.Text = "图书名称:";
-            // 
-            // BookAuthorchk
-            // 
-            this.BookAuthorchk.BackColor = System.Drawing.Color.Transparent;
-            this.BookAuthorchk.DownBack = null;
-            this.BookAuthorchk.Icon = null;
-            this.BookAuthorchk.IconIsButton = false;
-            this.BookAuthorchk.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.BookAuthorchk.IsPasswordChat = '\0';
-            this.BookAuthorchk.IsSystemPasswordChar = false;
-            this.BookAuthorchk.Lines = new string[0];
-            this.BookAuthorchk.Location = new System.Drawing.Point(240, 180);
-            this.BookAuthorchk.Margin = new System.Windows.Forms.Padding(0);
-            this.BookAuthorchk.MaxLength = 32767;
-            this.BookAuthorchk.MinimumSize = new System.Drawing.Size(28, 28);
-            this.BookAuthorchk.MouseBack = null;
-            this.BookAuthorchk.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.BookAuthorchk.Multiline = false;
-            this.BookAuthorchk.Name = "BookAuthorchk";
-            this.BookAuthorchk.NormlBack = null;
-            this.BookAuthorchk.Padding = new System.Windows.Forms.Padding(5);
-            this.BookAuthorchk.ReadOnly = false;
-            this.BookAuthorchk.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.BookAuthorchk.Size = new System.Drawing.Size(185, 28);
+            this.BookName_tb.BackColor = System.Drawing.Color.Transparent;
+            this.BookName_tb.DownBack = null;
+            this.BookName_tb.Icon = null;
+            this.BookName_tb.IconIsButton = false;
+            this.BookName_tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookName_tb.IsPasswordChat = '\0';
+            this.BookName_tb.IsSystemPasswordChar = false;
+            this.BookName_tb.Lines = new string[0];
+            this.BookName_tb.Location = new System.Drawing.Point(240, 136);
+            this.BookName_tb.Margin = new System.Windows.Forms.Padding(0);
+            this.BookName_tb.MaxLength = 32767;
+            this.BookName_tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.BookName_tb.MouseBack = null;
+            this.BookName_tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookName_tb.Multiline = false;
+            this.BookName_tb.Name = "BookName_tb";
+            this.BookName_tb.NormlBack = null;
+            this.BookName_tb.Padding = new System.Windows.Forms.Padding(5);
+            this.BookName_tb.ReadOnly = false;
+            this.BookName_tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BookName_tb.Size = new System.Drawing.Size(185, 28);
             // 
             // 
             // 
-            this.BookAuthorchk.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.BookAuthorchk.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BookAuthorchk.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.BookAuthorchk.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.BookAuthorchk.SkinTxt.Name = "BaseText";
-            this.BookAuthorchk.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.BookAuthorchk.SkinTxt.TabIndex = 0;
-            this.BookAuthorchk.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.BookAuthorchk.SkinTxt.WaterText = "";
-            this.BookAuthorchk.TabIndex = 0;
-            this.BookAuthorchk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BookAuthorchk.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.BookAuthorchk.WaterText = "";
-            this.BookAuthorchk.WordWrap = true;
+            this.BookName_tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BookName_tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookName_tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.BookName_tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.BookName_tb.SkinTxt.Name = "BaseText";
+            this.BookName_tb.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.BookName_tb.SkinTxt.TabIndex = 0;
+            this.BookName_tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookName_tb.SkinTxt.WaterText = "";
+            this.BookName_tb.TabIndex = 0;
+            this.BookName_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BookName_tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookName_tb.WaterText = "";
+            this.BookName_tb.WordWrap = true;
             // 
-            // BookAuthorlbl
+            // lbl_BookName_tb
             // 
-            this.BookAuthorlbl.AutoSize = true;
-            this.BookAuthorlbl.BackColor = System.Drawing.Color.Transparent;
-            this.BookAuthorlbl.BorderColor = System.Drawing.Color.White;
-            this.BookAuthorlbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BookAuthorlbl.Location = new System.Drawing.Point(168, 187);
-            this.BookAuthorlbl.Name = "BookAuthorlbl";
-            this.BookAuthorlbl.Size = new System.Drawing.Size(59, 17);
-            this.BookAuthorlbl.TabIndex = 1;
-            this.BookAuthorlbl.Text = "图书作者:";
+            this.lbl_BookName_tb.AutoSize = true;
+            this.lbl_BookName_tb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_BookName_tb.BorderColor = System.Drawing.Color.White;
+            this.lbl_BookName_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_BookName_tb.Location = new System.Drawing.Point(168, 143);
+            this.lbl_BookName_tb.Name = "lbl_BookName_tb";
+            this.lbl_BookName_tb.Size = new System.Drawing.Size(56, 17);
+            this.lbl_BookName_tb.TabIndex = 1;
+            this.lbl_BookName_tb.Text = "图书名称";
+            // 
+            // BookAuthor_tb
+            // 
+            this.BookAuthor_tb.BackColor = System.Drawing.Color.Transparent;
+            this.BookAuthor_tb.DownBack = null;
+            this.BookAuthor_tb.Icon = null;
+            this.BookAuthor_tb.IconIsButton = false;
+            this.BookAuthor_tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookAuthor_tb.IsPasswordChat = '\0';
+            this.BookAuthor_tb.IsSystemPasswordChar = false;
+            this.BookAuthor_tb.Lines = new string[0];
+            this.BookAuthor_tb.Location = new System.Drawing.Point(240, 180);
+            this.BookAuthor_tb.Margin = new System.Windows.Forms.Padding(0);
+            this.BookAuthor_tb.MaxLength = 32767;
+            this.BookAuthor_tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.BookAuthor_tb.MouseBack = null;
+            this.BookAuthor_tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookAuthor_tb.Multiline = false;
+            this.BookAuthor_tb.Name = "BookAuthor_tb";
+            this.BookAuthor_tb.NormlBack = null;
+            this.BookAuthor_tb.Padding = new System.Windows.Forms.Padding(5);
+            this.BookAuthor_tb.ReadOnly = false;
+            this.BookAuthor_tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BookAuthor_tb.Size = new System.Drawing.Size(185, 28);
+            // 
+            // 
+            // 
+            this.BookAuthor_tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BookAuthor_tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookAuthor_tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.BookAuthor_tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.BookAuthor_tb.SkinTxt.Name = "BaseText";
+            this.BookAuthor_tb.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.BookAuthor_tb.SkinTxt.TabIndex = 0;
+            this.BookAuthor_tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookAuthor_tb.SkinTxt.WaterText = "";
+            this.BookAuthor_tb.TabIndex = 0;
+            this.BookAuthor_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BookAuthor_tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookAuthor_tb.WaterText = "";
+            this.BookAuthor_tb.WordWrap = true;
+            // 
+            // lbl_BookAuthor_tb
+            // 
+            this.lbl_BookAuthor_tb.AutoSize = true;
+            this.lbl_BookAuthor_tb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_BookAuthor_tb.BorderColor = System.Drawing.Color.White;
+            this.lbl_BookAuthor_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_BookAuthor_tb.Location = new System.Drawing.Point(168, 187);
+            this.lbl_BookAuthor_tb.Name = "lbl_BookAuthor_tb";
+            this.lbl_BookAuthor_tb.Size = new System.Drawing.Size(56, 17);
+            this.lbl_BookAuthor_tb.TabIndex = 1;
+            this.lbl_BookAuthor_tb.Text = "图书作者";
             // 
             // BookPricelbl
             // 
@@ -155,9 +155,9 @@
             this.BookPricelbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BookPricelbl.Location = new System.Drawing.Point(168, 234);
             this.BookPricelbl.Name = "BookPricelbl";
-            this.BookPricelbl.Size = new System.Drawing.Size(59, 17);
+            this.BookPricelbl.Size = new System.Drawing.Size(56, 17);
             this.BookPricelbl.TabIndex = 1;
-            this.BookPricelbl.Text = "图书价格:";
+            this.BookPricelbl.Text = "图书价格";
             // 
             // BookCategorylbl
             // 
@@ -167,9 +167,9 @@
             this.BookCategorylbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.BookCategorylbl.Location = new System.Drawing.Point(168, 278);
             this.BookCategorylbl.Name = "BookCategorylbl";
-            this.BookCategorylbl.Size = new System.Drawing.Size(59, 17);
+            this.BookCategorylbl.Size = new System.Drawing.Size(56, 17);
             this.BookCategorylbl.TabIndex = 1;
-            this.BookCategorylbl.Text = "图书类别:";
+            this.BookCategorylbl.Text = "图书类别";
             // 
             // BookAddBtn
             // 
@@ -188,6 +188,8 @@
             // 
             // BookCategorycbo
             // 
+            this.BookCategorycbo.BaseColor = System.Drawing.Color.White;
+            this.BookCategorycbo.BorderColor = System.Drawing.Color.Black;
             this.BookCategorycbo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.BookCategorycbo.Font = new System.Drawing.Font("宋体", 11F);
             this.BookCategorycbo.FormattingEnabled = true;
@@ -199,9 +201,11 @@
             // 
             // BookPricenud
             // 
-            this.BookPricenud.Location = new System.Drawing.Point(240, 234);
+            this.BookPricenud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BookPricenud.Font = new System.Drawing.Font("宋体", 11F);
+            this.BookPricenud.Location = new System.Drawing.Point(240, 230);
             this.BookPricenud.Name = "BookPricenud";
-            this.BookPricenud.Size = new System.Drawing.Size(185, 21);
+            this.BookPricenud.Size = new System.Drawing.Size(185, 24);
             this.BookPricenud.TabIndex = 4;
             // 
             // BookInfoAdd_Form
@@ -216,10 +220,10 @@
             this.Controls.Add(this.BookCategorycbo);
             this.Controls.Add(this.BookCategorylbl);
             this.Controls.Add(this.BookPricelbl);
-            this.Controls.Add(this.BookAuthorlbl);
-            this.Controls.Add(this.BookNamelbl);
-            this.Controls.Add(this.BookAuthorchk);
-            this.Controls.Add(this.BookNamechk);
+            this.Controls.Add(this.lbl_BookAuthor_tb);
+            this.Controls.Add(this.lbl_BookName_tb);
+            this.Controls.Add(this.BookAuthor_tb);
+            this.Controls.Add(this.BookName_tb);
             this.MaximizeBox = false;
             this.Name = "BookInfoAdd_Form";
             this.ShowDrawIcon = false;
@@ -234,14 +238,14 @@
         }
 
         #endregion
-        private CCWin.SkinControl.SkinTextBox BookNamechk;
-        private CCWin.SkinControl.SkinLabel BookNamelbl;
-        private CCWin.SkinControl.SkinTextBox BookAuthorchk;
-        private CCWin.SkinControl.SkinLabel BookAuthorlbl;
+        private CCWin.SkinControl.SkinTextBox BookName_tb;
+        private CCWin.SkinControl.SkinLabel lbl_BookName_tb;
+        private CCWin.SkinControl.SkinTextBox BookAuthor_tb;
+        private CCWin.SkinControl.SkinLabel lbl_BookAuthor_tb;
         private CCWin.SkinControl.SkinLabel BookPricelbl;
         private CCWin.SkinControl.SkinLabel BookCategorylbl;
         private CCWin.SkinControl.SkinButton BookAddBtn;
         private CCWin.SkinControl.SkinComboBox BookCategorycbo;
-        private CCWin.SkinControl.SkinNumericUpDown BookPricenud;
+        private System.Windows.Forms.NumericUpDown BookPricenud;
     }
 }

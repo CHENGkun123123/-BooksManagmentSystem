@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BookModel
 {
@@ -27,10 +23,10 @@ namespace BookModel
         /// <param name="returnTime"></param>
         public BookBorrowReturnInfoModel(string bookID, string readerID, DateTime borrowTime, DateTime returnTime)
         {
-            BookID = bookID;
-            ReaderID = readerID;
-            BorrowTime = borrowTime;
-            ReturnTime = returnTime;
+            _bookID = bookID;
+            _readerID = readerID;
+            _borrowTime = borrowTime;
+            _returnTime = returnTime;
         }
 
         #region 字段

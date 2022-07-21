@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookModel
+﻿namespace BookModel
 {
     /// <summary>
     /// 读者基本信息表实体类
     /// </summary>
-    public class ReaderInfoModel
+    public class ReaderInfoModel : BaseModel
     {
         /// <summary>
         /// 默认构造
@@ -17,7 +11,6 @@ namespace BookModel
         public ReaderInfoModel()
         {
         }
-
         /// <summary>
         /// 有参构造
         /// </summary>
@@ -28,12 +21,14 @@ namespace BookModel
         /// <param name="mobile"></param>
         public ReaderInfoModel(string readerID, string readName, string eMail, string address, string mobile)
         {
-            ReaderID = readerID;
-            ReadName = readName;
-            EMail = eMail;
-            Address = address;
-            Mobile = mobile;
+            _readerID = readerID;
+            _readName = readName;
+            _eMail = eMail;
+            _address = address;
+            _mobile = mobile;
         }
+
+
 
         #region 字段
         private string _readerID;

@@ -3,20 +3,21 @@
 namespace Common.Enum
 {
     /// <summary>
-    /// 判断相关枚举
+    /// 图书状态枚举类
     /// </summary>
-    public enum JudgeEnum
+    public enum BookStateEnum
     {
         /// <summary>
-        /// 失败
+        /// 未借出
         /// </summary>
-        [Description("失败")]
+        [Description("未借出")]
         Default_State = 0,
+
         /// <summary>
-        /// 成功
+        /// 未借出
         /// </summary>
-        [Description("成功")]
-        Successful_State = 1,
+        [Description("已借出")]
+        Lend_State = 1,
 
     }
 }

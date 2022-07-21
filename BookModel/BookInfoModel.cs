@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookModel
+﻿namespace BookModel
 {
     /// <summary>
     /// 图书信息表实体类
@@ -27,15 +21,15 @@ namespace BookModel
         /// <param name="money"></param>
         /// <param name="bookID"></param>
         /// <param name="state"></param>
-        public BookInfoModel(string name, int categoryType, string author, long money, string bookID, int state)
+        public BookInfoModel(string name, int categoryType, string author, long money, int state)
         {
             _name = name;
             _categoryType = categoryType;
             _author = author;
             _money = money;
-            this.bookID = bookID;
             _state = state;
         }
+
 
 
         #region 字段
@@ -46,6 +40,8 @@ namespace BookModel
         private string bookID;
         private int _state;
         #endregion
+
+        #region 属性
         /// <summary>
         /// 图书名称
         /// </summary>
@@ -70,6 +66,8 @@ namespace BookModel
         /// 图书状态
         /// </summary>
         public int State { get => _state; set => _state = value; }
+        #endregion
+
 
     }
 }

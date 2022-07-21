@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookModel
+﻿namespace BookModel
 {
     /// <summary>
     /// 图书状态表实体类
     /// </summary>
-    public class BookStateModel
+    public class BookStateModel : BaseModel
     {
         /// <summary>
         /// 默认构造
@@ -17,7 +11,6 @@ namespace BookModel
         public BookStateModel()
         {
         }
-
         /// <summary>
         /// 有参构造
         /// </summary>
@@ -25,9 +18,11 @@ namespace BookModel
         /// <param name="description"></param>
         public BookStateModel(int bookState, string description)
         {
-            BookState = bookState;
-            Description = description;
+            _bookState = bookState;
+            _description = description;
         }
+
+
 
         #region 字段
         private int _bookState;

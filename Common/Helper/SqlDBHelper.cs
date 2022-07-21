@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Common.Helper
 {
@@ -93,7 +89,7 @@ namespace Common.Helper
                 //创建适配器对象
                 using (SqlDataAdapter sda = new SqlDataAdapter(sql, conn))
                 {
-                    
+
                     //创建数据表接收查询结果集
                     DataSet ds = new DataSet();
                     //判断参数是否为空
