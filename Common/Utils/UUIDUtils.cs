@@ -15,7 +15,7 @@ namespace Common.Utils
         /// 获取当前时间戳
         /// </summary>
         /// <returns></returns>
-        public int UUIDRandom()
+        public static int UUIDRandom()
         {
             return (int)new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
         }

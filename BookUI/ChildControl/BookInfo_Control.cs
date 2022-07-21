@@ -1,5 +1,4 @@
-﻿using CCWin;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,28 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BookUI.Admin
+namespace BookUI.ChildForm
 {
     /// <summary>
-    /// 主页窗体
+    /// 图书管理控件窗体
     /// </summary>
-    public partial class SystemHome : Skin_VS
+    public partial class BookInfo_Control : UserControl
     {
         /// <summary>
-        /// 默认构造方法
-        public SystemHome()
+        /// 默认构造
+        /// </summary>
+        public BookInfo_Control()
         {
             InitializeComponent();
-        }
 
+        }
         /// <summary>
-        /// 窗体加载时发生
+        /// 图书添加按钮点击事件
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void SystemHome_Load(object sender, EventArgs e)
+        private void BookAddBtn_Click(object sender, EventArgs e)
         {
-
+            //窗口显示
+            new BookInfoAdd_Form().ShowDialog();
         }
     }
 }

@@ -12,10 +12,15 @@ using System.Threading.Tasks;
 namespace BookBLL
 {
     /// <summary>
-    /// 管理员业务层
+    /// 管理员信息相关业务层
     /// </summary>
     public class AdminInfoBLL
     {
+        /// <summary>
+        /// 管理员信息表数据访问类
+        /// </summary>
+        AdminInfoDAL AdminInfoDAL = new AdminInfoDAL();
+
         /// <summary>
         /// 登录验证
         /// </summary>
@@ -33,7 +38,7 @@ namespace BookBLL
                 return LoginStateEnum.PwdNotErr;
             }
             //创建DataTable容器
-            DataTable dataTable = new AdminInfoDAL().GetAdminInfo(admin);
+            DataTable dataTable = AdminInfoDAL.GetAdminInfo(admin);
             //判断容器是否有内容
             if (dataTable.Rows.Count <= 0)
             {

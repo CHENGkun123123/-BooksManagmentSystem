@@ -17,7 +17,7 @@ namespace BookUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SystemHome());
+            Application.Run(new SystemHome_From());
         }
     }
 }

@@ -43,9 +43,12 @@
   <ItemGroup>
     <Compile Include="AdminInfoModel.cs" />
     <Compile Include="BaseModel.cs" />
+    <Compile Include="BookBorrowReturnInfoModel.cs" />
     <Compile Include="BookCategoryModel.cs" />
     <Compile Include="BookInfoModel.cs" />
+    <Compile Include="BookStateModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReaderInfoModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

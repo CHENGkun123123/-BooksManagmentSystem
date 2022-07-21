@@ -84,25 +84,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\Login.cs">
+    <Compile Include="ChildControl\BookBorrowed_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildControl\BookBorrowed_Control.Designer.cs">
+      <DependentUpon>BookBorrowed_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildControl\BookInfo_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildControl\BookInfo_Control.Designer.cs">
+      <DependentUpon>BookInfo_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildControl\BorrowReturnInfo_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildControl\BorrowReturnInfo_Control.Designer.cs">
+      <DependentUpon>BorrowReturnInfo_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildControl\ReaderInfo_ContRol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChildControl\ReaderInfo_ContRol.Designer.cs">
+      <DependentUpon>ReaderInfo_ContRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\BookInfoAdd_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="ChildForm\BookInfoAdd_Form.Designer.cs">
+      <DependentUpon>BookInfoAdd_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SystemHome.cs">
+    <Compile Include="ChildForm\BookInfoUpdate_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\SystemHome.Designer.cs">
-      <DependentUpon>SystemHome.cs</DependentUpon>
+    <Compile Include="ChildForm\BookInfoUpdate_Form.Designer.cs">
+      <DependentUpon>BookInfoUpdate_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\SystemHome_From.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\SystemHome_From.Designer.cs">
+      <DependentUpon>SystemHome_From.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="ChildControl\BookBorrowed_Control.resx">
+      <DependentUpon>BookBorrowed_Control.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\SystemHome.resx">
-      <DependentUpon>SystemHome.cs</DependentUpon>
+    <EmbeddedResource Include="ChildControl\BookInfo_Control.resx">
+      <DependentUpon>BookInfo_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildControl\BorrowReturnInfo_Control.resx">
+      <DependentUpon>BorrowReturnInfo_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildControl\ReaderInfo_ContRol.resx">
+      <DependentUpon>ReaderInfo_ContRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\BookInfoAdd_Form.resx">
+      <DependentUpon>BookInfoAdd_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\BookInfoUpdate_Form.resx">
+      <DependentUpon>BookInfoUpdate_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\SystemHome_From.resx">
+      <DependentUpon>SystemHome_From.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,6 +195,7 @@
       <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,6 +1,6 @@
 ﻿namespace BookUI
 {
-    partial class Login
+    partial class Login_Form
     {
         /// <summary>
         /// 必需的设计器变量。

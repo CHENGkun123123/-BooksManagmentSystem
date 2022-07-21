@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace DAL
 {
     /// <summary>
-    /// 管理员数据访问层
+    /// 管理员信息表数据访问层
     /// </summary>
     public class AdminInfoDAL
     {

@@ -18,12 +18,12 @@ namespace BookUI
     /// <summary>
     /// 登录窗体
     /// </summary>
-    public partial class Login : Skin_VS
+    public partial class Login_Form : Skin_VS
     {
         /// <summary>
         /// 默认构造方法
         /// </summary>
-        public Login()
+        public Login_Form()
         {
             InitializeComponent();
         }

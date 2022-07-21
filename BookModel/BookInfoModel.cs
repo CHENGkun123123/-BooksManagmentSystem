@@ -17,8 +17,9 @@ namespace BookModel
         public BookInfoModel()
         {
         }
+
         /// <summary>
-        /// 构造重载
+        /// 有参构造
         /// </summary>
         /// <param name="name"></param>
         /// <param name="categoryType"></param>
@@ -28,13 +29,15 @@ namespace BookModel
         /// <param name="state"></param>
         public BookInfoModel(string name, int categoryType, string author, long money, string bookID, int state)
         {
-            Name = name;
-            CategoryType = categoryType;
-            Author = author;
-            Money = money;
-            this.BookID = bookID;
-            State = state;
+            _name = name;
+            _categoryType = categoryType;
+            _author = author;
+            _money = money;
+            this.bookID = bookID;
+            _state = state;
         }
+
+
         #region 字段
         private string _name;
         private int _categoryType;
