@@ -191,6 +191,7 @@
             this.BookCategorycbo.BaseColor = System.Drawing.Color.White;
             this.BookCategorycbo.BorderColor = System.Drawing.Color.Black;
             this.BookCategorycbo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.BookCategorycbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BookCategorycbo.Font = new System.Drawing.Font("宋体", 11F);
             this.BookCategorycbo.FormattingEnabled = true;
             this.BookCategorycbo.Location = new System.Drawing.Point(240, 275);

@@ -22,7 +22,8 @@ namespace Common.Utils
             //循环页面控件
             foreach (Control cont in controlObj)
             {
-                //判断是否为TextBox控件
+
+;                //判断是否为TextBox控件
                 if (cont is SkinTextBox)
                 {
                     //判断控件Text值是否为空

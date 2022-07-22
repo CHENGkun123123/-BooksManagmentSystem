@@ -23,9 +23,13 @@ namespace BookBLL
         /// 添加图书
         /// </summary>
         /// <returns></returns>
-        public int Add(BookInfoModel model)
+        public MessageEnum AddBook(BookInfoModel model)
         {
-            return bookInfoDAL.BookAdd(model);
+            if (bookInfoDAL.BookAdd(model)>0)
+            {
+                return MessageEnum.OK;
+            }
+            return MessageEnum.No;
         }
 
         /// <summary>
@@ -37,5 +41,26 @@ namespace BookBLL
             return bookCategoryDAL.FindCategory();
         }
 
+        /// <summary>
+        /// 获取图书信息列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable FindBook()
+        {
+            return bookInfoDAL.FindBookInfo();
+        }
+
+        /// <summary>
+        /// 删除图书信息
+        /// </summary>
+        /// <returns></returns>
+        public MessageEnum DelBook(int id)
+        {
+            if (bookInfoDAL.BookDel(id)>0)
+            {
+                return MessageEnum.OK;
+            }
+            return MessageEnum.No;
+        }
     }
 }

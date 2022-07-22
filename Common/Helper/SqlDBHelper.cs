@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -113,7 +114,7 @@ namespace Common.Helper
         /// <param name="sql">sql语句</param>
         /// <param name="pars">可变参数</param>
         /// <returns></returns>
-        public static void ExecuteDataReader(string sql, params SqlParameter[] pars)
+        public static SqlDataReader ExecuteDataReader(string sql, params SqlParameter[] pars)
         {
             //创建连接对象
             using (SqlConnection conn = new SqlConnection(ConnString))
@@ -134,11 +135,16 @@ namespace Common.Helper
                         //判断是否有数据
                         if (reader.HasRows)
                         {
-                            reader.Read();
+                            while (reader.Read())
+                            {
+                                return reader;
+                            } 
                         }
+                        
                     }
                 }
             }
+            return null;
         }
 
     }

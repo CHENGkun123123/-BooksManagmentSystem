@@ -3,6 +3,7 @@ using BookModel;
 using CCWin;
 using CCWin.SkinControl;
 using Common.Enum;
+using Common.Tools;
 using Common.Utils;
 using System;
 using System.Windows.Forms;
@@ -19,8 +20,19 @@ namespace BookUI.ChildForm
         /// </summary>
         Func<Control.ControlCollection, bool> Myfunc;
 
-        public BookInfoAdd_Form()
+        //接收按钮名称
+        string btnName;
+        //图书id
+        int id;
+
+        /// <summary>
+        /// 默认构造
+        /// </summary>
+        /// <param name="btnName"></param>
+        public BookInfoAdd_Form(string btnName,int id)
         {
+            this.btnName = btnName;
+            this.id = id;
             InitializeComponent();
         }
 
@@ -33,17 +45,38 @@ namespace BookUI.ChildForm
         {
             //委托调用
             Myfunc = ControlUtils.TextBoxCheckIsNull;
-            //判断窗体是否有空值
+            //判断窗体控件是否有空值
             if (Myfunc(this.Controls))
             {
-                BookInfoModel model = new BookInfoModel(
-               this.BookName_tb.Text
-               , (int)this.BookCategorycbo.SelectedValue
-               , this.BookAuthor_tb.Text
-               , (long)this.BookPricenud.Value
-               , (int)BookStateEnum.Default_State);
+                IsUpAdd();
+            }
+            this.Close();
+        }
 
-                new BookInfoBLL().Add(model);
+        /// <summary>
+        /// 判断修改或添加
+        /// </summary>
+        private void IsUpAdd()
+        {
+            //赋值
+            BookInfoModel model = new BookInfoModel(
+           this.BookName_tb.Text
+           , (int)this.BookCategorycbo.SelectedValue
+           , this.BookAuthor_tb.Text
+           , (long)this.BookPricenud.Value
+           , (int)BookStateEnum.Default_State);
+
+            //判断是添加还是修改
+            if (this.btnName == "BookAdd_Btn")//添加操作
+            {
+                //输出添加图书结果
+                MessageBox.Show(EnumHelper.GetDescription(new BookInfoBLL().AddBook(model)));
+            }
+            else if (this.btnName == "Modify_btn")//修改操作
+            {
+                model.Id = this.id;
+                //输出添加图书结果
+                MessageBox.Show(EnumHelper.GetDescription(new BookInfoBLL().AddBook(model)));
             }
         }
 
@@ -60,33 +93,6 @@ namespace BookUI.ChildForm
             this.BookCategorycbo.ValueMember = "CategoryID";
         }
 
-        /// <summary>
-        /// 判断TextBox控件是否为空
-        /// </summary>
-        /// <returns></returns>
-        private bool TextBoxCheckIsNull()
-        {
-            //循环页面控件
-            foreach (Control control in this.Controls)
-            {
-                //判断是否为TextBox控件
-                if (control is SkinTextBox)
-                {
-                    //判断控件Text值是否为空
-                    if (string.IsNullOrEmpty((control as SkinTextBox).Text))
-                    {
-                        //获取控件名
-                        string txt_name = ((control as SkinTextBox).Name);
-                        //获取Label控件名
-                        Label l = (Label)this.Controls.Find("lbl_" + txt_name, true)[0];
-                        //输出为空信息
-                        MessageBox.Show($"{l.Text}不能为空");
-                        return false;
-                    }
-                }
-            }
 
-            return true;
-        }
     }
 }
