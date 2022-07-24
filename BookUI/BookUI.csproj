@@ -108,17 +108,11 @@
     <Compile Include="ChildControl\ReaderInfo_ContRol.Designer.cs">
       <DependentUpon>ReaderInfo_ContRol.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForm\BookInfoAdd_Form.cs">
+    <Compile Include="ChildForm\BookInfoAddAndUpd_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForm\BookInfoAdd_Form.Designer.cs">
-      <DependentUpon>BookInfoAdd_Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ChildForm\BookInfoUpdate_Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChildForm\BookInfoUpdate_Form.Designer.cs">
-      <DependentUpon>BookInfoUpdate_Form.cs</DependentUpon>
+    <Compile Include="ChildForm\BookInfoAddAndUpd_Form.Designer.cs">
+      <DependentUpon>BookInfoAddAndUpd_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm\Login_Form.cs">
       <SubType>Form</SubType>
@@ -146,11 +140,8 @@
     <EmbeddedResource Include="ChildControl\ReaderInfo_ContRol.resx">
       <DependentUpon>ReaderInfo_ContRol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForm\BookInfoAdd_Form.resx">
-      <DependentUpon>BookInfoAdd_Form.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChildForm\BookInfoUpdate_Form.resx">
-      <DependentUpon>BookInfoUpdate_Form.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForm\BookInfoAddAndUpd_Form.resx">
+      <DependentUpon>BookInfoAddAndUpd_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

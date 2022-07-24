@@ -32,9 +32,9 @@ namespace Common.Utils
                         //获取控件名
                         string txt_name = ((cont as SkinTextBox).Name);
                         //获取Label控件
-                        SkinLabel l = (SkinLabel)controlObj.Find($"lbl_{txt_name}" , true)[0];
+                        SkinLabel label = (SkinLabel)controlObj.Find($"lbl_{txt_name}" , true)[0];
                         //返回错误信息
-                        MessageBox.Show($"{l.Text}不能为空");
+                        MessageBox.Show($"{label.Text}不能为空");
                         return false;
                     }
                 }

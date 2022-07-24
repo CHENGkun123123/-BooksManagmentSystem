@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminInfoDAL.cs" />
+    <Compile Include="BookBorrowReturnInfoDAL.cs" />
+    <Compile Include="ReaderInfoDAL.cs" />
     <Compile Include="BookCategoryDAL.cs" />
     <Compile Include="BookInfoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

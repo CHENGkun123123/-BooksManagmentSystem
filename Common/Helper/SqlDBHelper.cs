@@ -17,7 +17,7 @@ namespace Common.Helper
         public static string ConnString
         {
             //指向app.config配置文件配置好的数据库连接字符串
-            get => ConfigurationManager.ConnectionStrings["Books"].ToString();
+            get => ConfigurationManager.ConnectionStrings["SQLServerBooks"].ToString();
         }
 
         /// <summary>

@@ -35,11 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BookAdd_Btn = new CCWin.SkinControl.SkinButton();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.BookSearch_btn = new CCWin.SkinControl.SkinButton();
+            this.BookSearch_tb = new CCWin.SkinControl.SkinTextBox();
+            this.lbl_BookSearch_tb = new CCWin.SkinControl.SkinLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.skinTreeView1 = new CCWin.SkinControl.SkinTreeView();
+            this.BookCategory_tvw = new CCWin.SkinControl.SkinTreeView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.BookInfo_dgv = new CCWin.SkinControl.SkinDataGridView();
             this.panel1.SuspendLayout();
@@ -51,9 +51,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.BookAdd_Btn);
-            this.panel1.Controls.Add(this.skinButton1);
-            this.panel1.Controls.Add(this.skinTextBox1);
-            this.panel1.Controls.Add(this.skinLabel1);
+            this.panel1.Controls.Add(this.BookSearch_btn);
+            this.panel1.Controls.Add(this.BookSearch_tb);
+            this.panel1.Controls.Add(this.lbl_BookSearch_tb);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -75,90 +75,92 @@
             this.BookAdd_Btn.UseVisualStyleBackColor = false;
             this.BookAdd_Btn.Click += new System.EventHandler(this.BookAddBtn_Click);
             // 
-            // skinButton1
+            // BookSearch_btn
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(347, 38);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(75, 23);
-            this.skinButton1.TabIndex = 6;
-            this.skinButton1.Text = "搜索";
-            this.skinButton1.UseVisualStyleBackColor = false;
+            this.BookSearch_btn.BackColor = System.Drawing.Color.Transparent;
+            this.BookSearch_btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.BookSearch_btn.DownBack = null;
+            this.BookSearch_btn.Location = new System.Drawing.Point(347, 38);
+            this.BookSearch_btn.MouseBack = null;
+            this.BookSearch_btn.Name = "BookSearch_btn";
+            this.BookSearch_btn.NormlBack = null;
+            this.BookSearch_btn.Size = new System.Drawing.Size(75, 23);
+            this.BookSearch_btn.TabIndex = 6;
+            this.BookSearch_btn.Text = "搜索";
+            this.BookSearch_btn.UseVisualStyleBackColor = false;
+            this.BookSearch_btn.Click += new System.EventHandler(this.BookSearch_btn_Click);
             // 
-            // skinTextBox1
+            // BookSearch_tb
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[0];
-            this.skinTextBox1.Location = new System.Drawing.Point(154, 36);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(185, 28);
+            this.BookSearch_tb.BackColor = System.Drawing.Color.Transparent;
+            this.BookSearch_tb.DownBack = null;
+            this.BookSearch_tb.Icon = null;
+            this.BookSearch_tb.IconIsButton = false;
+            this.BookSearch_tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookSearch_tb.IsPasswordChat = '\0';
+            this.BookSearch_tb.IsSystemPasswordChar = false;
+            this.BookSearch_tb.Lines = new string[0];
+            this.BookSearch_tb.Location = new System.Drawing.Point(154, 36);
+            this.BookSearch_tb.Margin = new System.Windows.Forms.Padding(0);
+            this.BookSearch_tb.MaxLength = 32767;
+            this.BookSearch_tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.BookSearch_tb.MouseBack = null;
+            this.BookSearch_tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookSearch_tb.Multiline = false;
+            this.BookSearch_tb.Name = "BookSearch_tb";
+            this.BookSearch_tb.NormlBack = null;
+            this.BookSearch_tb.Padding = new System.Windows.Forms.Padding(5);
+            this.BookSearch_tb.ReadOnly = false;
+            this.BookSearch_tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BookSearch_tb.Size = new System.Drawing.Size(185, 28);
             // 
             // 
             // 
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "";
-            this.skinTextBox1.TabIndex = 4;
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "";
-            this.skinTextBox1.WordWrap = true;
+            this.BookSearch_tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BookSearch_tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookSearch_tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.BookSearch_tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.BookSearch_tb.SkinTxt.Name = "BaseText";
+            this.BookSearch_tb.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.BookSearch_tb.SkinTxt.TabIndex = 0;
+            this.BookSearch_tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookSearch_tb.SkinTxt.WaterText = "";
+            this.BookSearch_tb.TabIndex = 4;
+            this.BookSearch_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BookSearch_tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookSearch_tb.WaterText = "";
+            this.BookSearch_tb.WordWrap = true;
             // 
-            // skinLabel1
+            // lbl_BookSearch_tb
             // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.skinLabel1.Location = new System.Drawing.Point(64, 42);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(92, 17);
-            this.skinLabel1.TabIndex = 3;
-            this.skinLabel1.Text = "请输入书籍号：";
+            this.lbl_BookSearch_tb.AutoSize = true;
+            this.lbl_BookSearch_tb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_BookSearch_tb.BorderColor = System.Drawing.Color.White;
+            this.lbl_BookSearch_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_BookSearch_tb.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_BookSearch_tb.Location = new System.Drawing.Point(107, 42);
+            this.lbl_BookSearch_tb.Name = "lbl_BookSearch_tb";
+            this.lbl_BookSearch_tb.Size = new System.Drawing.Size(44, 17);
+            this.lbl_BookSearch_tb.TabIndex = 3;
+            this.lbl_BookSearch_tb.Text = "书籍号";
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.skinTreeView1);
+            this.panel2.Controls.Add(this.BookCategory_tvw);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 425);
             this.panel2.TabIndex = 1;
             // 
-            // skinTreeView1
+            // BookCategory_tvw
             // 
-            this.skinTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTreeView1.Location = new System.Drawing.Point(0, 0);
-            this.skinTreeView1.Name = "skinTreeView1";
-            this.skinTreeView1.Size = new System.Drawing.Size(200, 425);
-            this.skinTreeView1.TabIndex = 0;
+            this.BookCategory_tvw.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookCategory_tvw.Location = new System.Drawing.Point(0, 0);
+            this.BookCategory_tvw.Name = "BookCategory_tvw";
+            this.BookCategory_tvw.Size = new System.Drawing.Size(200, 425);
+            this.BookCategory_tvw.TabIndex = 0;
+            this.BookCategory_tvw.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.BookCategory_tvw_NodeMouseDoubleClick);
             // 
             // panel3
             // 
@@ -207,6 +209,7 @@
             this.BookInfo_dgv.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.BookInfo_dgv.Location = new System.Drawing.Point(0, 0);
             this.BookInfo_dgv.Name = "BookInfo_dgv";
+            this.BookInfo_dgv.ReadOnly = true;
             this.BookInfo_dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.BookInfo_dgv.RowHeadersVisible = false;
             this.BookInfo_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -248,10 +251,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private CCWin.SkinControl.SkinButton BookAdd_Btn;
-        private CCWin.SkinControl.SkinButton skinButton1;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private CCWin.SkinControl.SkinTreeView skinTreeView1;
+        private CCWin.SkinControl.SkinButton BookSearch_btn;
+        private CCWin.SkinControl.SkinTextBox BookSearch_tb;
+        private CCWin.SkinControl.SkinLabel lbl_BookSearch_tb;
+        private CCWin.SkinControl.SkinTreeView BookCategory_tvw;
         private CCWin.SkinControl.SkinDataGridView BookInfo_dgv;
     }
 }

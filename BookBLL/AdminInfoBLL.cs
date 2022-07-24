@@ -8,7 +8,7 @@ using System.Data;
 namespace BookBLL
 {
     /// <summary>
-    /// 管理员信息相关业务层
+    /// 管理员信息相关业务类
     /// </summary>
     public class AdminInfoBLL
     {

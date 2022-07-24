@@ -69,5 +69,7 @@ namespace BookUI.Admin
             bookBorrowed_Control.Dock = DockStyle.Fill;
             this.skinPanel4.Controls.Add(bookBorrowed_Control);
         }
+
+     
     }
 }

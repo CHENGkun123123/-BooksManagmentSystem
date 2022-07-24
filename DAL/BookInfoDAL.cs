@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 namespace DAL
 {
     /// <summary>
-    /// 图书信息表数据访问层
+    /// 图书信息表数据访问类
     /// </summary>
     public class BookInfoDAL
     {
@@ -26,7 +26,7 @@ namespace DAL
                 new SqlParameter("@CategoryType",model.CategoryType),
                 new SqlParameter("@Author",model.@Author),
                 new SqlParameter("@Money",model.Money),
-                new SqlParameter("@BookID",UUIDUtils.UUIDRandom()),//生成图书编号
+                new SqlParameter("@BookID","B"+UUIDUtils.UUIDRandom()),//生成图书编号
                 new SqlParameter("@State",model.State),
             };
 
@@ -74,15 +74,38 @@ namespace DAL
         /// 连表获取图书信息
         /// </summary>
         /// <returns></returns>
-        public DataTable FindBookInfo()
+        public DataTable GetCategoryIdBookInfo(string categoryId)
         {
-            string sql = @"SELECT a.ID 图书ID,a.Name 图书名称,a.Author 图书作者,a.Money 图书价格,a.BookID 图书编号,c.CategoryName 图书类型,b.Description 借出状态 FROM BookInfo a
+            string sql = @"SELECT a.ID 图书ID,a.Name 图书名称,a.Author 图书作者,a.Money 图书价格,a.BookID 图书编号,c.CategoryName 图书类型,a.CategoryType 图书类别id,b.Description 借出状态 FROM BookInfo a
                            LEFT JOIN BookState b
                            ON a.State = b.BookState
                            LEFT JOIN BookCategory c
-                           ON a.CategoryType = c.CategoryID";
+                           ON a.CategoryType = c.CategoryID
+                           WHERE a.CategoryType like @CategoryType";
+            SqlParameter[] pars =
+            {
+                new SqlParameter("@CategoryType",$"%{categoryId}%")
+            };
+            return SqlDBHelper.ExecuteDataTable(sql, pars);
+        }
 
-            return SqlDBHelper.ExecuteDataTable(sql, null);
+        /// <summary>
+        /// 连表获取图书信息
+        /// </summary>
+        /// <returns></returns>
+        public DataTable FindBookInfo(string id)
+        {
+            string sql = @"SELECT a.ID 图书ID,a.Name 图书名称,a.Author 图书作者,a.Money 图书价格,a.BookID 图书编号,c.CategoryName 图书类型,a.CategoryType 图书类别id,b.Description 借出状态 FROM BookInfo a
+                           LEFT JOIN BookState b
+                           ON a.State = b.BookState
+                           LEFT JOIN BookCategory c
+                           ON a.CategoryType = c.CategoryID
+                           WHERE a.ID like @ID";
+            SqlParameter[] pars =
+            {
+                new SqlParameter("@ID",$"%{id}%")
+            };
+            return SqlDBHelper.ExecuteDataTable(sql, pars);
         }
     }
 }

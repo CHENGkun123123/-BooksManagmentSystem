@@ -36,12 +36,12 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
             this.skinToolStrip1.SuspendLayout();
             this.TabControl1.SuspendLayout();
@@ -172,42 +172,6 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.skinPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1055, 541);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "读者管理";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.skinPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1055, 541);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "借还记录";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.skinPanel4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1055, 541);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "图书借还";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Enter += new System.EventHandler(this.tabPage4_Enter);
-            // 
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -220,6 +184,18 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Size = new System.Drawing.Size(1049, 535);
             this.skinPanel1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.skinPanel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1055, 541);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "读者管理";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // skinPanel2
             // 
@@ -234,6 +210,18 @@
             this.skinPanel2.Size = new System.Drawing.Size(1049, 535);
             this.skinPanel2.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.skinPanel3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1055, 541);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "借还记录";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPage3.Enter += new System.EventHandler(this.tabPage3_Enter);
+            // 
             // skinPanel3
             // 
             this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
@@ -246,6 +234,18 @@
             this.skinPanel3.NormlBack = null;
             this.skinPanel3.Size = new System.Drawing.Size(1049, 535);
             this.skinPanel3.TabIndex = 0;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.skinPanel4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1055, 541);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "图书借还";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPage4.Enter += new System.EventHandler(this.tabPage4_Enter);
             // 
             // skinPanel4
             // 
@@ -260,19 +260,19 @@
             this.skinPanel4.Size = new System.Drawing.Size(1049, 535);
             this.skinPanel4.TabIndex = 0;
             // 
-            // SystemHome
+            // SystemHome_From
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.CaptionBackColorBottom = System.Drawing.Color.Silver;
-            this.CaptionBackColorTop = System.Drawing.Color.DimGray;
+            this.CaptionBackColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.CaptionBackColorTop = System.Drawing.Color.White;
             this.CaptionFont = new System.Drawing.Font("幼圆", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ClientSize = new System.Drawing.Size(1071, 687);
             this.Controls.Add(this.TabControl1);
             this.Controls.Add(this.skinToolStrip1);
             this.MaximizeBox = false;
-            this.Name = "SystemHome";
+            this.Name = "SystemHome_From";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.ShowDrawIcon = false;
             this.ShowIcon = false;

@@ -32,21 +32,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
+            this.BorrowReturnInfo_Dgv = new CCWin.SkinControl.SkinDataGridView();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BorrowReturnInfo_Dgv)).BeginInit();
             this.skinPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // skinDataGridView1
+            // BorrowReturnInfo_Dgv
             // 
+            this.BorrowReturnInfo_Dgv.AllowUserToAddRows = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToDeleteRows = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToResizeColumns = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView1.ColumnFont = null;
-            this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.BorrowReturnInfo_Dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.BorrowReturnInfo_Dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BorrowReturnInfo_Dgv.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.BorrowReturnInfo_Dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BorrowReturnInfo_Dgv.ColumnFont = null;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -54,9 +59,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BorrowReturnInfo_Dgv.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -64,27 +69,28 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView1.EnableHeadersVisualStyles = false;
-            this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.Location = new System.Drawing.Point(0, 100);
-            this.skinDataGridView1.Name = "skinDataGridView1";
-            this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.BorrowReturnInfo_Dgv.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BorrowReturnInfo_Dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BorrowReturnInfo_Dgv.EnableHeadersVisualStyles = false;
+            this.BorrowReturnInfo_Dgv.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BorrowReturnInfo_Dgv.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BorrowReturnInfo_Dgv.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BorrowReturnInfo_Dgv.Location = new System.Drawing.Point(0, 100);
+            this.BorrowReturnInfo_Dgv.Name = "BorrowReturnInfo_Dgv";
+            this.BorrowReturnInfo_Dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BorrowReturnInfo_Dgv.RowHeadersVisible = false;
+            this.BorrowReturnInfo_Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.skinDataGridView1.RowTemplate.Height = 23;
-            this.skinDataGridView1.Size = new System.Drawing.Size(967, 441);
-            this.skinDataGridView1.TabIndex = 1;
-            this.skinDataGridView1.TitleBack = null;
-            this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.BorrowReturnInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.BorrowReturnInfo_Dgv.RowTemplate.Height = 23;
+            this.BorrowReturnInfo_Dgv.Size = new System.Drawing.Size(967, 441);
+            this.BorrowReturnInfo_Dgv.TabIndex = 1;
+            this.BorrowReturnInfo_Dgv.TitleBack = null;
+            this.BorrowReturnInfo_Dgv.TitleBackColorBegin = System.Drawing.Color.White;
+            this.BorrowReturnInfo_Dgv.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
             // 
             // skinPanel1
             // 
@@ -117,11 +123,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.skinDataGridView1);
+            this.Controls.Add(this.BorrowReturnInfo_Dgv);
             this.Controls.Add(this.skinPanel1);
             this.Name = "BorrowReturnInfo_Control";
             this.Size = new System.Drawing.Size(967, 541);
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BorrowReturnInfo_Dgv)).EndInit();
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -130,7 +136,7 @@
 
         #endregion
 
-        private CCWin.SkinControl.SkinDataGridView skinDataGridView1;
+        private CCWin.SkinControl.SkinDataGridView BorrowReturnInfo_Dgv;
         private CCWin.SkinControl.SkinPanel skinPanel1;
         private CCWin.SkinControl.SkinLabel skinLabel1;
     }

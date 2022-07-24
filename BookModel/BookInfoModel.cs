@@ -19,7 +19,6 @@
         /// <param name="categoryType"></param>
         /// <param name="author"></param>
         /// <param name="money"></param>
-        /// <param name="bookID"></param>
         /// <param name="state"></param>
         public BookInfoModel(string name, int categoryType, string author, long money, int state)
         {
@@ -28,6 +27,21 @@
             _author = author;
             _money = money;
             _state = state;
+        }
+
+        /// <summary>
+        /// 接收修改信息构造
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="author"></param>
+        /// <param name="money"></param>
+        public BookInfoModel(int id,string name, string author, long money,int bookCategory)
+        {
+            _name = name;
+            _author = author;
+            _money = money;
+            _categoryType= bookCategory;
+            Id = id;
         }
 
 

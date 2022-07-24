@@ -1,6 +1,6 @@
 ﻿namespace BookUI.ChildForm
 {
-    partial class BookInfoAdd_Form
+    partial class BookInfoAddAndUpd_Form
     {
         /// <summary>
         /// Required designer variable.
