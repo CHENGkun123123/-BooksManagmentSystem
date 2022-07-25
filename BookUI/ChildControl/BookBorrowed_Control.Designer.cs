@@ -38,35 +38,35 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
+            this.ReaderOk_Btn = new CCWin.SkinControl.SkinButton();
+            this.ReaderId_tb = new CCWin.SkinControl.SkinTextBox();
+            this.ReaderName_lbl = new CCWin.SkinControl.SkinLabel();
+            this.lbl_ReaderName_lbl = new CCWin.SkinControl.SkinLabel();
+            this.ReaderId_lbl = new CCWin.SkinControl.SkinLabel();
+            this.lbl_ReaderId_lbl = new CCWin.SkinControl.SkinLabel();
+            this.lbl_ReaderId_tb = new CCWin.SkinControl.SkinLabel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
+            this.BorrowReturnInfo_Dgv = new CCWin.SkinControl.SkinDataGridView();
             this.skinFlowLayoutPanel3 = new CCWin.SkinControl.SkinFlowLayoutPanel();
             this.skinFlowLayoutPanel4 = new CCWin.SkinControl.SkinFlowLayoutPanel();
             this.skinPanel6 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.Return_Btn = new CCWin.SkinControl.SkinButton();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
-            this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
+            this.BookInfo_Dgv = new CCWin.SkinControl.SkinDataGridView();
             this.skinFlowLayoutPanel2 = new CCWin.SkinControl.SkinFlowLayoutPanel();
             this.skinFlowLayoutPanel1 = new CCWin.SkinControl.SkinFlowLayoutPanel();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.Borrow_Btn = new CCWin.SkinControl.SkinButton();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
-            this.skinButton4 = new CCWin.SkinControl.SkinButton();
-            this.skinTextBox2 = new CCWin.SkinControl.SkinTextBox();
-            this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
+            this.Book_OK_Btn = new CCWin.SkinControl.SkinButton();
+            this.BookId_tb = new CCWin.SkinControl.SkinTextBox();
+            this.lbl_BookId_tb = new CCWin.SkinControl.SkinLabel();
             this.skinPanel1.SuspendLayout();
             this.skinPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BorrowReturnInfo_Dgv)).BeginInit();
             this.skinPanel6.SuspendLayout();
             this.skinPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookInfo_Dgv)).BeginInit();
             this.skinPanel5.SuspendLayout();
             this.skinPanel4.SuspendLayout();
             this.SuspendLayout();
@@ -74,13 +74,13 @@
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel1.Controls.Add(this.skinButton1);
-            this.skinPanel1.Controls.Add(this.skinTextBox1);
-            this.skinPanel1.Controls.Add(this.skinLabel5);
-            this.skinPanel1.Controls.Add(this.skinLabel4);
-            this.skinPanel1.Controls.Add(this.skinLabel3);
-            this.skinPanel1.Controls.Add(this.skinLabel2);
-            this.skinPanel1.Controls.Add(this.skinLabel1);
+            this.skinPanel1.Controls.Add(this.ReaderOk_Btn);
+            this.skinPanel1.Controls.Add(this.ReaderId_tb);
+            this.skinPanel1.Controls.Add(this.ReaderName_lbl);
+            this.skinPanel1.Controls.Add(this.lbl_ReaderName_lbl);
+            this.skinPanel1.Controls.Add(this.ReaderId_lbl);
+            this.skinPanel1.Controls.Add(this.lbl_ReaderId_lbl);
+            this.skinPanel1.Controls.Add(this.lbl_ReaderId_tb);
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.skinPanel1.DownBack = null;
@@ -91,128 +91,130 @@
             this.skinPanel1.Size = new System.Drawing.Size(1017, 100);
             this.skinPanel1.TabIndex = 0;
             // 
-            // skinButton1
+            // ReaderOk_Btn
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(575, 21);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(75, 23);
-            this.skinButton1.TabIndex = 2;
-            this.skinButton1.Text = "确定";
-            this.skinButton1.UseVisualStyleBackColor = false;
+            this.ReaderOk_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.ReaderOk_Btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.ReaderOk_Btn.DownBack = null;
+            this.ReaderOk_Btn.Location = new System.Drawing.Point(575, 21);
+            this.ReaderOk_Btn.MouseBack = null;
+            this.ReaderOk_Btn.Name = "ReaderOk_Btn";
+            this.ReaderOk_Btn.NormlBack = null;
+            this.ReaderOk_Btn.Size = new System.Drawing.Size(75, 23);
+            this.ReaderOk_Btn.TabIndex = 2;
+            this.ReaderOk_Btn.Text = "确定";
+            this.ReaderOk_Btn.UseVisualStyleBackColor = false;
+            this.ReaderOk_Btn.Click += new System.EventHandler(this.ReaderOk_Btn_Click);
             // 
-            // skinTextBox1
+            // ReaderId_tb
             // 
-            this.skinTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox1.DownBack = null;
-            this.skinTextBox1.Icon = null;
-            this.skinTextBox1.IconIsButton = false;
-            this.skinTextBox1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.IsPasswordChat = '\0';
-            this.skinTextBox1.IsSystemPasswordChar = false;
-            this.skinTextBox1.Lines = new string[] {
-        "skinTextBox1"};
-            this.skinTextBox1.Location = new System.Drawing.Point(385, 19);
-            this.skinTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox1.MaxLength = 32767;
-            this.skinTextBox1.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox1.MouseBack = null;
-            this.skinTextBox1.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox1.Multiline = false;
-            this.skinTextBox1.Name = "skinTextBox1";
-            this.skinTextBox1.NormlBack = null;
-            this.skinTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox1.ReadOnly = false;
-            this.skinTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox1.Size = new System.Drawing.Size(185, 28);
-            // 
+            this.ReaderId_tb.BackColor = System.Drawing.Color.Transparent;
+            this.ReaderId_tb.DownBack = null;
+            this.ReaderId_tb.Icon = null;
+            this.ReaderId_tb.IconIsButton = false;
+            this.ReaderId_tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.ReaderId_tb.IsPasswordChat = '\0';
+            this.ReaderId_tb.IsSystemPasswordChar = false;
+            this.ReaderId_tb.Lines = new string[0];
+            this.ReaderId_tb.Location = new System.Drawing.Point(385, 19);
+            this.ReaderId_tb.Margin = new System.Windows.Forms.Padding(0);
+            this.ReaderId_tb.MaxLength = 32767;
+            this.ReaderId_tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.ReaderId_tb.MouseBack = null;
+            this.ReaderId_tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.ReaderId_tb.Multiline = false;
+            this.ReaderId_tb.Name = "ReaderId_tb";
+            this.ReaderId_tb.NormlBack = null;
+            this.ReaderId_tb.Padding = new System.Windows.Forms.Padding(5);
+            this.ReaderId_tb.ReadOnly = false;
+            this.ReaderId_tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.ReaderId_tb.Size = new System.Drawing.Size(185, 28);
             // 
             // 
-            this.skinTextBox1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox1.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox1.SkinTxt.Name = "BaseText";
-            this.skinTextBox1.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.skinTextBox1.SkinTxt.TabIndex = 0;
-            this.skinTextBox1.SkinTxt.Text = "skinTextBox1";
-            this.skinTextBox1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.SkinTxt.WaterText = "";
-            this.skinTextBox1.TabIndex = 1;
-            this.skinTextBox1.Text = "skinTextBox1";
-            this.skinTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox1.WaterText = "";
-            this.skinTextBox1.WordWrap = true;
             // 
-            // skinLabel5
+            this.ReaderId_tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ReaderId_tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReaderId_tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.ReaderId_tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.ReaderId_tb.SkinTxt.Name = "BaseText";
+            this.ReaderId_tb.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.ReaderId_tb.SkinTxt.TabIndex = 0;
+            this.ReaderId_tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.ReaderId_tb.SkinTxt.WaterText = "";
+            this.ReaderId_tb.TabIndex = 1;
+            this.ReaderId_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ReaderId_tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.ReaderId_tb.WaterText = "";
+            this.ReaderId_tb.WordWrap = true;
             // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(531, 65);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(81, 17);
-            this.skinLabel5.TabIndex = 0;
-            this.skinLabel5.Text = "请输入读者ID";
+            // ReaderName_lbl
             // 
-            // skinLabel4
+            this.ReaderName_lbl.AutoSize = true;
+            this.ReaderName_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ReaderName_lbl.BorderColor = System.Drawing.Color.White;
+            this.ReaderName_lbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ReaderName_lbl.Location = new System.Drawing.Point(534, 65);
+            this.ReaderName_lbl.Name = "ReaderName_lbl";
+            this.ReaderName_lbl.Size = new System.Drawing.Size(92, 17);
+            this.ReaderName_lbl.TabIndex = 0;
+            this.ReaderName_lbl.Text = "请输入读者姓名";
+            this.ReaderName_lbl.Visible = false;
             // 
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel4.Location = new System.Drawing.Point(473, 65);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(68, 17);
-            this.skinLabel4.TabIndex = 0;
-            this.skinLabel4.Text = "读者姓名：";
+            // lbl_ReaderName_lbl
             // 
-            // skinLabel3
+            this.lbl_ReaderName_lbl.AutoSize = true;
+            this.lbl_ReaderName_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ReaderName_lbl.BorderColor = System.Drawing.Color.White;
+            this.lbl_ReaderName_lbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_ReaderName_lbl.Location = new System.Drawing.Point(473, 65);
+            this.lbl_ReaderName_lbl.Name = "lbl_ReaderName_lbl";
+            this.lbl_ReaderName_lbl.Size = new System.Drawing.Size(59, 17);
+            this.lbl_ReaderName_lbl.TabIndex = 0;
+            this.lbl_ReaderName_lbl.Text = "读者姓名:";
+            this.lbl_ReaderName_lbl.Visible = false;
             // 
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.Location = new System.Drawing.Point(382, 65);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(81, 17);
-            this.skinLabel3.TabIndex = 0;
-            this.skinLabel3.Text = "请输入读者ID";
+            // ReaderId_lbl
             // 
-            // skinLabel2
+            this.ReaderId_lbl.AutoSize = true;
+            this.ReaderId_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.ReaderId_lbl.BorderColor = System.Drawing.Color.White;
+            this.ReaderId_lbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ReaderId_lbl.Location = new System.Drawing.Point(382, 65);
+            this.ReaderId_lbl.Name = "ReaderId_lbl";
+            this.ReaderId_lbl.Size = new System.Drawing.Size(81, 17);
+            this.ReaderId_lbl.TabIndex = 0;
+            this.ReaderId_lbl.Text = "请输入读者ID";
+            this.ReaderId_lbl.Visible = false;
             // 
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(324, 65);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(57, 17);
-            this.skinLabel2.TabIndex = 0;
-            this.skinLabel2.Text = "读者ID：";
+            // lbl_ReaderId_lbl
             // 
-            // skinLabel1
+            this.lbl_ReaderId_lbl.AutoSize = true;
+            this.lbl_ReaderId_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ReaderId_lbl.BorderColor = System.Drawing.Color.White;
+            this.lbl_ReaderId_lbl.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_ReaderId_lbl.Location = new System.Drawing.Point(324, 65);
+            this.lbl_ReaderId_lbl.Name = "lbl_ReaderId_lbl";
+            this.lbl_ReaderId_lbl.Size = new System.Drawing.Size(57, 17);
+            this.lbl_ReaderId_lbl.TabIndex = 0;
+            this.lbl_ReaderId_lbl.Text = "读者ID：";
+            this.lbl_ReaderId_lbl.Visible = false;
             // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(293, 25);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(81, 17);
-            this.skinLabel1.TabIndex = 0;
-            this.skinLabel1.Text = "请输入读者ID";
+            // lbl_ReaderId_tb
+            // 
+            this.lbl_ReaderId_tb.AutoSize = true;
+            this.lbl_ReaderId_tb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_ReaderId_tb.BorderColor = System.Drawing.Color.White;
+            this.lbl_ReaderId_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_ReaderId_tb.Location = new System.Drawing.Point(330, 25);
+            this.lbl_ReaderId_tb.Name = "lbl_ReaderId_tb";
+            this.lbl_ReaderId_tb.Size = new System.Drawing.Size(45, 17);
+            this.lbl_ReaderId_tb.TabIndex = 0;
+            this.lbl_ReaderId_tb.Text = "读者ID";
             // 
             // skinPanel2
             // 
             this.skinPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel2.Controls.Add(this.skinDataGridView2);
+            this.skinPanel2.Controls.Add(this.BorrowReturnInfo_Dgv);
             this.skinPanel2.Controls.Add(this.skinFlowLayoutPanel3);
             this.skinPanel2.Controls.Add(this.skinFlowLayoutPanel4);
             this.skinPanel2.Controls.Add(this.skinPanel6);
@@ -226,14 +228,19 @@
             this.skinPanel2.Size = new System.Drawing.Size(1017, 211);
             this.skinPanel2.TabIndex = 0;
             // 
-            // skinDataGridView2
+            // BorrowReturnInfo_Dgv
             // 
+            this.BorrowReturnInfo_Dgv.AllowUserToAddRows = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToDeleteRows = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToResizeColumns = false;
+            this.BorrowReturnInfo_Dgv.AllowUserToResizeRows = false;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.skinDataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView2.ColumnFont = null;
-            this.skinDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.BorrowReturnInfo_Dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.BorrowReturnInfo_Dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BorrowReturnInfo_Dgv.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.BorrowReturnInfo_Dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BorrowReturnInfo_Dgv.ColumnFont = null;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -241,9 +248,9 @@
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.BorrowReturnInfo_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BorrowReturnInfo_Dgv.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -251,27 +258,29 @@
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.skinDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView2.EnableHeadersVisualStyles = false;
-            this.skinDataGridView2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView2.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView2.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView2.Location = new System.Drawing.Point(46, 0);
-            this.skinDataGridView2.Name = "skinDataGridView2";
-            this.skinDataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.BorrowReturnInfo_Dgv.DefaultCellStyle = dataGridViewCellStyle11;
+            this.BorrowReturnInfo_Dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BorrowReturnInfo_Dgv.EnableHeadersVisualStyles = false;
+            this.BorrowReturnInfo_Dgv.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BorrowReturnInfo_Dgv.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BorrowReturnInfo_Dgv.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BorrowReturnInfo_Dgv.Location = new System.Drawing.Point(46, 0);
+            this.BorrowReturnInfo_Dgv.Name = "BorrowReturnInfo_Dgv";
+            this.BorrowReturnInfo_Dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BorrowReturnInfo_Dgv.RowHeadersVisible = false;
+            this.BorrowReturnInfo_Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.skinDataGridView2.RowTemplate.Height = 23;
-            this.skinDataGridView2.Size = new System.Drawing.Size(925, 162);
-            this.skinDataGridView2.TabIndex = 7;
-            this.skinDataGridView2.TitleBack = null;
-            this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.BorrowReturnInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.BorrowReturnInfo_Dgv.RowTemplate.Height = 23;
+            this.BorrowReturnInfo_Dgv.Size = new System.Drawing.Size(925, 162);
+            this.BorrowReturnInfo_Dgv.TabIndex = 7;
+            this.BorrowReturnInfo_Dgv.TitleBack = null;
+            this.BorrowReturnInfo_Dgv.TitleBackColorBegin = System.Drawing.Color.White;
+            this.BorrowReturnInfo_Dgv.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.BorrowReturnInfo_Dgv.Visible = false;
             // 
             // skinFlowLayoutPanel3
             // 
@@ -302,7 +311,7 @@
             // skinPanel6
             // 
             this.skinPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel6.Controls.Add(this.skinButton3);
+            this.skinPanel6.Controls.Add(this.Return_Btn);
             this.skinPanel6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinPanel6.DownBack = null;
@@ -312,25 +321,27 @@
             this.skinPanel6.NormlBack = null;
             this.skinPanel6.Size = new System.Drawing.Size(1017, 49);
             this.skinPanel6.TabIndex = 4;
+            this.skinPanel6.Visible = false;
             // 
-            // skinButton3
+            // Return_Btn
             // 
-            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton3.DownBack = null;
-            this.skinButton3.Location = new System.Drawing.Point(896, 10);
-            this.skinButton3.MouseBack = null;
-            this.skinButton3.Name = "skinButton3";
-            this.skinButton3.NormlBack = null;
-            this.skinButton3.Size = new System.Drawing.Size(75, 23);
-            this.skinButton3.TabIndex = 2;
-            this.skinButton3.Text = "确定还书";
-            this.skinButton3.UseVisualStyleBackColor = false;
+            this.Return_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Return_Btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.Return_Btn.DownBack = null;
+            this.Return_Btn.Location = new System.Drawing.Point(896, 10);
+            this.Return_Btn.MouseBack = null;
+            this.Return_Btn.Name = "Return_Btn";
+            this.Return_Btn.NormlBack = null;
+            this.Return_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Return_Btn.TabIndex = 2;
+            this.Return_Btn.Text = "确定还书";
+            this.Return_Btn.UseVisualStyleBackColor = false;
+            this.Return_Btn.Click += new System.EventHandler(this.Return_Btn_Click);
             // 
             // skinPanel3
             // 
             this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel3.Controls.Add(this.skinDataGridView1);
+            this.skinPanel3.Controls.Add(this.BookInfo_Dgv);
             this.skinPanel3.Controls.Add(this.skinFlowLayoutPanel2);
             this.skinPanel3.Controls.Add(this.skinFlowLayoutPanel1);
             this.skinPanel3.Controls.Add(this.skinPanel5);
@@ -345,14 +356,19 @@
             this.skinPanel3.Size = new System.Drawing.Size(1017, 289);
             this.skinPanel3.TabIndex = 0;
             // 
-            // skinDataGridView1
+            // BookInfo_Dgv
             // 
+            this.BookInfo_Dgv.AllowUserToAddRows = false;
+            this.BookInfo_Dgv.AllowUserToDeleteRows = false;
+            this.BookInfo_Dgv.AllowUserToResizeColumns = false;
+            this.BookInfo_Dgv.AllowUserToResizeRows = false;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView1.ColumnFont = null;
-            this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.BookInfo_Dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.BookInfo_Dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BookInfo_Dgv.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.BookInfo_Dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BookInfo_Dgv.ColumnFont = null;
+            this.BookInfo_Dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -360,9 +376,9 @@
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BookInfo_Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.BookInfo_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BookInfo_Dgv.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -370,27 +386,30 @@
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView1.EnableHeadersVisualStyles = false;
-            this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.Location = new System.Drawing.Point(46, 41);
-            this.skinDataGridView1.Name = "skinDataGridView1";
-            this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.BookInfo_Dgv.DefaultCellStyle = dataGridViewCellStyle15;
+            this.BookInfo_Dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookInfo_Dgv.EnableHeadersVisualStyles = false;
+            this.BookInfo_Dgv.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BookInfo_Dgv.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BookInfo_Dgv.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BookInfo_Dgv.LineNumber = false;
+            this.BookInfo_Dgv.Location = new System.Drawing.Point(46, 41);
+            this.BookInfo_Dgv.Name = "BookInfo_Dgv";
+            this.BookInfo_Dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.BookInfo_Dgv.RowHeadersVisible = false;
+            this.BookInfo_Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.skinDataGridView1.RowTemplate.Height = 23;
-            this.skinDataGridView1.Size = new System.Drawing.Size(925, 213);
-            this.skinDataGridView1.TabIndex = 3;
-            this.skinDataGridView1.TitleBack = null;
-            this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.BookInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.BookInfo_Dgv.RowTemplate.Height = 23;
+            this.BookInfo_Dgv.Size = new System.Drawing.Size(925, 213);
+            this.BookInfo_Dgv.TabIndex = 3;
+            this.BookInfo_Dgv.TitleBack = null;
+            this.BookInfo_Dgv.TitleBackColorBegin = System.Drawing.Color.White;
+            this.BookInfo_Dgv.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.BookInfo_Dgv.Visible = false;
             // 
             // skinFlowLayoutPanel2
             // 
@@ -421,7 +440,7 @@
             // skinPanel5
             // 
             this.skinPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel5.Controls.Add(this.skinButton2);
+            this.skinPanel5.Controls.Add(this.Borrow_Btn);
             this.skinPanel5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.skinPanel5.DownBack = null;
@@ -431,27 +450,29 @@
             this.skinPanel5.NormlBack = null;
             this.skinPanel5.Size = new System.Drawing.Size(1017, 35);
             this.skinPanel5.TabIndex = 1;
+            this.skinPanel5.Visible = false;
             // 
-            // skinButton2
+            // Borrow_Btn
             // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.DownBack = null;
-            this.skinButton2.Location = new System.Drawing.Point(896, 7);
-            this.skinButton2.MouseBack = null;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = null;
-            this.skinButton2.Size = new System.Drawing.Size(75, 23);
-            this.skinButton2.TabIndex = 2;
-            this.skinButton2.Text = "确定借书";
-            this.skinButton2.UseVisualStyleBackColor = false;
+            this.Borrow_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Borrow_Btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.Borrow_Btn.DownBack = null;
+            this.Borrow_Btn.Location = new System.Drawing.Point(896, 7);
+            this.Borrow_Btn.MouseBack = null;
+            this.Borrow_Btn.Name = "Borrow_Btn";
+            this.Borrow_Btn.NormlBack = null;
+            this.Borrow_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Borrow_Btn.TabIndex = 2;
+            this.Borrow_Btn.Text = "确定借书";
+            this.Borrow_Btn.UseVisualStyleBackColor = false;
+            this.Borrow_Btn.Click += new System.EventHandler(this.Borrow_Btn_Click);
             // 
             // skinPanel4
             // 
             this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel4.Controls.Add(this.skinButton4);
-            this.skinPanel4.Controls.Add(this.skinTextBox2);
-            this.skinPanel4.Controls.Add(this.skinLabel6);
+            this.skinPanel4.Controls.Add(this.Book_OK_Btn);
+            this.skinPanel4.Controls.Add(this.BookId_tb);
+            this.skinPanel4.Controls.Add(this.lbl_BookId_tb);
             this.skinPanel4.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.skinPanel4.DownBack = null;
@@ -461,76 +482,75 @@
             this.skinPanel4.NormlBack = null;
             this.skinPanel4.Size = new System.Drawing.Size(1017, 41);
             this.skinPanel4.TabIndex = 0;
+            this.skinPanel4.Visible = false;
             // 
-            // skinButton4
+            // Book_OK_Btn
             // 
-            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton4.DownBack = null;
-            this.skinButton4.Location = new System.Drawing.Point(327, 6);
-            this.skinButton4.MouseBack = null;
-            this.skinButton4.Name = "skinButton4";
-            this.skinButton4.NormlBack = null;
-            this.skinButton4.Size = new System.Drawing.Size(75, 23);
-            this.skinButton4.TabIndex = 2;
-            this.skinButton4.Text = "确定";
-            this.skinButton4.UseVisualStyleBackColor = false;
+            this.Book_OK_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Book_OK_Btn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.Book_OK_Btn.DownBack = null;
+            this.Book_OK_Btn.Location = new System.Drawing.Point(327, 6);
+            this.Book_OK_Btn.MouseBack = null;
+            this.Book_OK_Btn.Name = "Book_OK_Btn";
+            this.Book_OK_Btn.NormlBack = null;
+            this.Book_OK_Btn.Size = new System.Drawing.Size(75, 23);
+            this.Book_OK_Btn.TabIndex = 2;
+            this.Book_OK_Btn.Text = "确定";
+            this.Book_OK_Btn.UseVisualStyleBackColor = false;
+            this.Book_OK_Btn.Click += new System.EventHandler(this.Book_OK_Btn_Click);
             // 
-            // skinTextBox2
+            // BookId_tb
             // 
-            this.skinTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox2.DownBack = null;
-            this.skinTextBox2.Icon = null;
-            this.skinTextBox2.IconIsButton = false;
-            this.skinTextBox2.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox2.IsPasswordChat = '\0';
-            this.skinTextBox2.IsSystemPasswordChar = false;
-            this.skinTextBox2.Lines = new string[] {
-        "skinTextBox1"};
-            this.skinTextBox2.Location = new System.Drawing.Point(137, 3);
-            this.skinTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox2.MaxLength = 32767;
-            this.skinTextBox2.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox2.MouseBack = null;
-            this.skinTextBox2.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox2.Multiline = false;
-            this.skinTextBox2.Name = "skinTextBox2";
-            this.skinTextBox2.NormlBack = null;
-            this.skinTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox2.ReadOnly = false;
-            this.skinTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox2.Size = new System.Drawing.Size(185, 28);
-            // 
+            this.BookId_tb.BackColor = System.Drawing.Color.Transparent;
+            this.BookId_tb.DownBack = null;
+            this.BookId_tb.Icon = null;
+            this.BookId_tb.IconIsButton = false;
+            this.BookId_tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookId_tb.IsPasswordChat = '\0';
+            this.BookId_tb.IsSystemPasswordChar = false;
+            this.BookId_tb.Lines = new string[0];
+            this.BookId_tb.Location = new System.Drawing.Point(137, 3);
+            this.BookId_tb.Margin = new System.Windows.Forms.Padding(0);
+            this.BookId_tb.MaxLength = 32767;
+            this.BookId_tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.BookId_tb.MouseBack = null;
+            this.BookId_tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.BookId_tb.Multiline = false;
+            this.BookId_tb.Name = "BookId_tb";
+            this.BookId_tb.NormlBack = null;
+            this.BookId_tb.Padding = new System.Windows.Forms.Padding(5);
+            this.BookId_tb.ReadOnly = false;
+            this.BookId_tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BookId_tb.Size = new System.Drawing.Size(185, 28);
             // 
             // 
-            this.skinTextBox2.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox2.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox2.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox2.SkinTxt.Name = "BaseText";
-            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(175, 18);
-            this.skinTextBox2.SkinTxt.TabIndex = 0;
-            this.skinTextBox2.SkinTxt.Text = "skinTextBox1";
-            this.skinTextBox2.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox2.SkinTxt.WaterText = "";
-            this.skinTextBox2.TabIndex = 1;
-            this.skinTextBox2.Text = "skinTextBox1";
-            this.skinTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox2.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox2.WaterText = "";
-            this.skinTextBox2.WordWrap = true;
             // 
-            // skinLabel6
+            this.BookId_tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BookId_tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookId_tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.BookId_tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.BookId_tb.SkinTxt.Name = "BaseText";
+            this.BookId_tb.SkinTxt.Size = new System.Drawing.Size(175, 18);
+            this.BookId_tb.SkinTxt.TabIndex = 0;
+            this.BookId_tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookId_tb.SkinTxt.WaterText = "";
+            this.BookId_tb.TabIndex = 1;
+            this.BookId_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BookId_tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.BookId_tb.WaterText = "";
+            this.BookId_tb.WordWrap = true;
             // 
-            this.skinLabel6.AutoSize = true;
-            this.skinLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel6.BorderColor = System.Drawing.Color.White;
-            this.skinLabel6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel6.Location = new System.Drawing.Point(45, 9);
-            this.skinLabel6.Name = "skinLabel6";
-            this.skinLabel6.Size = new System.Drawing.Size(81, 17);
-            this.skinLabel6.TabIndex = 0;
-            this.skinLabel6.Text = "请输入图书ID";
+            // lbl_BookId_tb
+            // 
+            this.lbl_BookId_tb.AutoSize = true;
+            this.lbl_BookId_tb.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_BookId_tb.BorderColor = System.Drawing.Color.White;
+            this.lbl_BookId_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbl_BookId_tb.Location = new System.Drawing.Point(79, 9);
+            this.lbl_BookId_tb.Name = "lbl_BookId_tb";
+            this.lbl_BookId_tb.Size = new System.Drawing.Size(56, 17);
+            this.lbl_BookId_tb.TabIndex = 0;
+            this.lbl_BookId_tb.Text = "图书编号";
             // 
             // BookBorrowed_Control
             // 
@@ -544,10 +564,10 @@
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();
             this.skinPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BorrowReturnInfo_Dgv)).EndInit();
             this.skinPanel6.ResumeLayout(false);
             this.skinPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BookInfo_Dgv)).EndInit();
             this.skinPanel5.ResumeLayout(false);
             this.skinPanel4.ResumeLayout(false);
             this.skinPanel4.PerformLayout();
@@ -560,26 +580,26 @@
         private CCWin.SkinControl.SkinPanel skinPanel1;
         private CCWin.SkinControl.SkinPanel skinPanel2;
         private CCWin.SkinControl.SkinPanel skinPanel3;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private CCWin.SkinControl.SkinTextBox skinTextBox1;
-        private CCWin.SkinControl.SkinButton skinButton1;
-        private CCWin.SkinControl.SkinLabel skinLabel3;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
-        private CCWin.SkinControl.SkinLabel skinLabel5;
-        private CCWin.SkinControl.SkinLabel skinLabel4;
+        private CCWin.SkinControl.SkinLabel lbl_ReaderId_tb;
+        private CCWin.SkinControl.SkinTextBox ReaderId_tb;
+        private CCWin.SkinControl.SkinButton ReaderOk_Btn;
+        private CCWin.SkinControl.SkinLabel ReaderId_lbl;
+        private CCWin.SkinControl.SkinLabel lbl_ReaderId_lbl;
+        private CCWin.SkinControl.SkinLabel ReaderName_lbl;
+        private CCWin.SkinControl.SkinLabel lbl_ReaderName_lbl;
         private CCWin.SkinControl.SkinPanel skinPanel4;
-        private CCWin.SkinControl.SkinButton skinButton2;
-        private CCWin.SkinControl.SkinTextBox skinTextBox2;
-        private CCWin.SkinControl.SkinLabel skinLabel6;
-        private CCWin.SkinControl.SkinDataGridView skinDataGridView1;
+        private CCWin.SkinControl.SkinButton Borrow_Btn;
+        private CCWin.SkinControl.SkinTextBox BookId_tb;
+        private CCWin.SkinControl.SkinLabel lbl_BookId_tb;
+        private CCWin.SkinControl.SkinDataGridView BookInfo_Dgv;
         private CCWin.SkinControl.SkinFlowLayoutPanel skinFlowLayoutPanel2;
         private CCWin.SkinControl.SkinFlowLayoutPanel skinFlowLayoutPanel1;
         private CCWin.SkinControl.SkinPanel skinPanel5;
-        private CCWin.SkinControl.SkinDataGridView skinDataGridView2;
+        private CCWin.SkinControl.SkinDataGridView BorrowReturnInfo_Dgv;
         private CCWin.SkinControl.SkinFlowLayoutPanel skinFlowLayoutPanel3;
         private CCWin.SkinControl.SkinFlowLayoutPanel skinFlowLayoutPanel4;
         private CCWin.SkinControl.SkinPanel skinPanel6;
-        private CCWin.SkinControl.SkinButton skinButton3;
-        private CCWin.SkinControl.SkinButton skinButton4;
+        private CCWin.SkinControl.SkinButton Return_Btn;
+        private CCWin.SkinControl.SkinButton Book_OK_Btn;
     }
 }

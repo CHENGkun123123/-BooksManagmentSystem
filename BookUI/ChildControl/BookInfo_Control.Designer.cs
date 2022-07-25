@@ -138,11 +138,11 @@
             this.lbl_BookSearch_tb.BorderColor = System.Drawing.Color.White;
             this.lbl_BookSearch_tb.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lbl_BookSearch_tb.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_BookSearch_tb.Location = new System.Drawing.Point(107, 42);
+            this.lbl_BookSearch_tb.Location = new System.Drawing.Point(95, 42);
             this.lbl_BookSearch_tb.Name = "lbl_BookSearch_tb";
-            this.lbl_BookSearch_tb.Size = new System.Drawing.Size(44, 17);
+            this.lbl_BookSearch_tb.Size = new System.Drawing.Size(56, 17);
             this.lbl_BookSearch_tb.TabIndex = 3;
-            this.lbl_BookSearch_tb.Text = "书籍号";
+            this.lbl_BookSearch_tb.Text = "图书编号";
             // 
             // panel2
             // 

@@ -49,6 +49,46 @@ namespace Common.Helper
         }
 
         /// <summary>
+        /// 执行事务非查询操作，增删改
+        /// </summary>
+        /// <param name="sql">sql语句</param>
+        /// <param name="parameters">可变参数</param>
+        /// <returns>受影响行数</returns>
+        public static bool ExecuteNonQueryT(string[] sql, List<SqlParameter[]> parslist)
+        {
+            using (SqlConnection conn = new SqlConnection(ConnString))
+            {
+                conn.Open();
+                using (SqlTransaction stn = conn.BeginTransaction())
+                {
+                    using (SqlCommand cmd = conn.CreateCommand())
+                    {
+                        try
+                        {
+                            cmd.Connection = conn;
+                            cmd.Transaction = stn;
+                            for (int i = 0; i < sql.Length; i++)
+                            {
+                                cmd.CommandText = sql[i];
+                                cmd.Parameters.AddRange(parslist[i]);
+                                cmd.ExecuteNonQuery();
+                            }
+                            stn.Commit();
+                            return true;
+                            
+                        }
+                        catch (Exception ex)
+                        {
+                            //事务回滚
+                            stn.Rollback();
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// 执行首行查询方法
         /// </summary>
         /// <param name="sql">sql语句</param>

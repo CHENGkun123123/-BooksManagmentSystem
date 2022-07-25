@@ -1,4 +1,5 @@
 ﻿using BookBLL;
+using Common.Utils;
 using System.Windows.Forms;
 
 namespace BookUI.ChildControl
@@ -21,7 +22,7 @@ namespace BookUI.ChildControl
             InitializeComponent();
             //生成数据源
             MyReaderDataSource(); 
-            //
+            //生成按钮
             MyDgvBtn();
         }
         /// <summary>
@@ -49,6 +50,26 @@ namespace BookUI.ChildControl
             delbtn.HeaderText = "";
             delbtn.DefaultCellStyle.NullValue = "删除";
             this.ReaderInfo_Dgv.Columns.Add(delbtn);
+        }
+
+        /// <summary>
+        /// 搜索按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReaderSearch_btn_Click(object sender, System.EventArgs e)
+        {
+            //非空判断
+            if (ControlUtils.TextBoxCheckIsNull(skinPanel1.Controls))
+            {
+                this.ReaderInfo_Dgv.DataSource = readerInfoBLL.FindReaders(this.ReaderId_tb.Text);
+                //查询结果为空时刷新数据
+                if (this.ReaderInfo_Dgv.Rows.Count==0)
+                {
+                    MessageBox.Show("该读者不存在");
+                    MyReaderDataSource();
+                }
+            }
         }
     }
 }

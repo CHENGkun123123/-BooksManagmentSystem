@@ -1,4 +1,5 @@
 ﻿using BookModel;
+using Common.Enum;
 using Common.Helper;
 using Common.Utils;
 using System.Data;
@@ -104,6 +105,26 @@ namespace DAL
             SqlParameter[] pars =
             {
                 new SqlParameter("@ID",$"%{id}%")
+            };
+            return SqlDBHelper.ExecuteDataTable(sql, pars);
+        }
+
+        /// <summary>
+        /// 根据图书状态和图书编号获取图书信息
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetBookState(string bookId)
+        {
+            string sql = @"SELECT a.ID 图书ID,a.Name 图书名称,a.Author 图书作者,a.Money 图书价格,a.BookID 图书编号,c.CategoryName 图书类型,a.CategoryType 图书类别id,b.Description 借出状态 FROM BookInfo a
+                           LEFT JOIN BookState b
+                           ON a.State = b.BookState
+                           LEFT JOIN BookCategory c
+                           ON a.CategoryType = c.CategoryID
+                           WHERE a.State = @State AND a.BookID like @BookID";
+            SqlParameter[] pars =
+            {
+                new SqlParameter("@State",BookStateEnum.Default_State),
+                new SqlParameter("@BookID",$"%{bookId}%")
             };
             return SqlDBHelper.ExecuteDataTable(sql, pars);
         }

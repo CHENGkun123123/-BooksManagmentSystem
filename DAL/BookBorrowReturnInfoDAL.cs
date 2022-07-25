@@ -1,7 +1,9 @@
-﻿using Common.Helper;
+﻿using Common.Enum;
+using Common.Helper;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +27,94 @@ namespace DAL
                            LEFT JOIN [dbo].[ReaderInfo] c
                            ON c.ReaderID = a.ReaderID";
             return SqlDBHelper.ExecuteDataTable(sql, null);
+        }
+
+        /// <summary>
+        /// 根据读者id获取图书借书记录
+        /// </summary>
+        /// <param name="readerid">读者id</param>
+        /// <returns></returns>
+        public DataTable FindBookBorrowInfo(string readerid)
+        {
+            string sql = @"SELECT ID ID,ReaderID 读者编号,BookID 图书编号,BorrowTime 借书时间 FROM [dbo].[BookBorrowReturnInfo]
+                          WHERE ReaderID = @ReaderID AND ReturnTime IS NULL";
+
+            SqlParameter[] pars =
+            {
+                new SqlParameter("@ReaderID",readerid)
+            };
+
+            return SqlDBHelper.ExecuteDataTable(sql, pars);
+        }
+
+        /// <summary>
+        /// 根据书籍id和读者id更新还书时间和书籍状态-使用事务
+        /// </summary>
+        /// <returns></returns>
+        public bool UpDBorrowTr(string readerId, string bookId)
+        {
+            string[] sql =
+            {
+                //操作借还记录表
+                @"UPDATE [dbo].[BookBorrowReturnInfo] SET ReturnTime = @ReturnTime
+                WHERE ReaderID = @ReaderID AND BookID = @BookID",
+                //操作图书表
+                @"UPDATE [dbo].[BookInfo] SET State = @State
+                WHERE BookId = @BookId",
+             };
+
+            SqlParameter[] pars1 =
+            {
+                new SqlParameter("@ReturnTime",DateTime.Now.ToString()),
+                new SqlParameter("@ReaderID",readerId),
+                new SqlParameter("@BookID",bookId),
+            };
+            SqlParameter[] pars2 =
+            {
+                new SqlParameter("@State",BookStateEnum.Default_State),//未借出状态
+                new SqlParameter("@BookId2",bookId)
+            };
+            List<SqlParameter[]> parsList = new List<SqlParameter[]>
+            {
+                pars1,pars2
+            };
+
+            return SqlDBHelper.ExecuteNonQueryT(sql, parsList);
+        }
+
+        /// <summary>
+        /// 根据书籍id和读者id更新借书时间和书籍状态-使用事务
+        /// </summary>
+        /// <returns></returns>
+        public bool UpDReturnTr(string readerId, string bookId)
+        {
+            string[] sql =
+            {
+                //操作借还记录表
+                @"INSERT INTO [dbo].[BookBorrowReturnInfo] VALUES(@BookID,@ReaderID,@BorrowTime,@ReturnTime)",
+                //操作图书表
+                @"UPDATE [dbo].[BookInfo] SET State = @State
+                WHERE BookId = @BookId",
+             };
+
+            SqlParameter[] pars1 =
+            {
+                new SqlParameter("@BookID",bookId),
+                new SqlParameter("@ReaderID",readerId),
+                new SqlParameter("@BorrowTime",DateTime.Now.ToString()),
+                new SqlParameter("@ReturnTime",DBNull.Value)
+            };
+            SqlParameter[] pars2 =
+            {
+                new SqlParameter("@State",BookStateEnum.Lend_State),//未借出状态
+                new SqlParameter("@BookId2",bookId)
+            };
+            List<SqlParameter[]> parsList = new List<SqlParameter[]>
+            {
+                pars1,pars2
+            };
+
+            return SqlDBHelper.ExecuteNonQueryT(sql, parsList);
         }
     }
 }

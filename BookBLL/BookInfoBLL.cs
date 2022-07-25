@@ -107,5 +107,52 @@ namespace BookBLL
         {
             return bookBorrowReturnInfoDAL.FindBookBorrowInfo();
         }
+
+        /// <summary>
+        /// 根据读者id获取借还记录列表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable FindBookBorrowInfo(string readerid)
+        {
+            return bookBorrowReturnInfoDAL.FindBookBorrowInfo(readerid);
+        }
+
+        /// <summary>
+        /// 根据图书状态获取图书列表
+        /// </summary>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public DataTable GetBookState(string bookId)
+        {
+            return bookInfoDAL.GetBookState(bookId);
+        }
+
+        /// <summary>
+        /// 更新还书时间
+        /// </summary>
+        /// <returns></returns>
+        public MessageEnum UpDBorrowTime(string readerId, string bookId)
+        {
+            if (bookBorrowReturnInfoDAL.UpDBorrowTr(readerId, bookId))
+            {
+                return MessageEnum.OK;
+            }
+
+            return MessageEnum.No;
+        }
+
+        /// <summary>
+        /// 更新借书时间
+        /// </summary>
+        /// <returns></returns>
+        public MessageEnum UpDReturnTime(string readerId, string bookId)
+        {
+            if (bookBorrowReturnInfoDAL.UpDReturnTr(readerId, bookId))
+            {
+                return MessageEnum.OK;
+            }
+
+            return MessageEnum.No;
+        }
     }
 }

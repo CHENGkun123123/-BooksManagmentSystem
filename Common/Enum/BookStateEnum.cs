@@ -14,7 +14,7 @@ namespace Common.Enum
         Default_State = 0,
 
         /// <summary>
-        /// 未借出
+        /// 已借出
         /// </summary>
         [Description("已借出")]
         Lend_State = 1,
