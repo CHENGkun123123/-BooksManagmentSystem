@@ -19,5 +19,6 @@ namespace Common.Enum
         [Description("已借出")]
         Lend_State = 1,
 
+
     }
 }

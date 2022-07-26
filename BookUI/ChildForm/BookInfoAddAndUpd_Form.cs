@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BookUI.ChildForm
 {
     /// <summary>
-    /// 图书添加窗体
+    /// 图书添加和修改窗体
     /// </summary>
     public partial class BookInfoAddAndUpd_Form : Skin_VS
     {

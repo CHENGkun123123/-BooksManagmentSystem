@@ -30,5 +30,15 @@ namespace BookUI.ChildControl
             //绑定数据源
             this.BorrowReturnInfo_Dgv.DataSource = bookInfoBLL.FindBookBorrowInfo();
         }
+
+        /// <summary>
+        /// 控件加载时发生事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BorrowReturnInfo_Control_Load(object sender, System.EventArgs e)
+        {
+            MyBorrowDataSource();
+        }
     }
 }

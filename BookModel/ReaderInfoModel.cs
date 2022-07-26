@@ -12,16 +12,32 @@
         {
         }
         /// <summary>
-        /// 有参构造
+        /// 有参构造,用于新增读者信息
         /// </summary>
         /// <param name="readerID"></param>
         /// <param name="readName"></param>
         /// <param name="eMail"></param>
         /// <param name="address"></param>
         /// <param name="mobile"></param>
-        public ReaderInfoModel(string readerID, string readName, string eMail, string address, string mobile)
+        public ReaderInfoModel(string readName, string eMail, string address, string mobile)
         {
-            _readerID = readerID;
+            _readName = readName;
+            _eMail = eMail;
+            _address = address;
+            _mobile = mobile;
+        }
+
+        /// <summary>
+        /// 用于接收修改信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="readName"></param>
+        /// <param name="eMail"></param>
+        /// <param name="address"></param>
+        /// <param name="mobile"></param>
+        public ReaderInfoModel(int id,string readName, string eMail, string address, string mobile)
+        {
+            Id = id;
             _readName = readName;
             _eMail = eMail;
             _address = address;

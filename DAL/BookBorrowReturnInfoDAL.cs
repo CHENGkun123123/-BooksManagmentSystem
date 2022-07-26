@@ -30,7 +30,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// 根据读者id获取图书借书记录
+        /// 根据读者id获取未还记录
         /// </summary>
         /// <param name="readerid">读者id</param>
         /// <returns></returns>

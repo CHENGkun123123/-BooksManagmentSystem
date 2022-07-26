@@ -127,6 +127,7 @@
             this.Controls.Add(this.skinPanel1);
             this.Name = "BorrowReturnInfo_Control";
             this.Size = new System.Drawing.Size(967, 541);
+            this.Load += new System.EventHandler(this.BorrowReturnInfo_Control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BorrowReturnInfo_Dgv)).EndInit();
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel1.PerformLayout();

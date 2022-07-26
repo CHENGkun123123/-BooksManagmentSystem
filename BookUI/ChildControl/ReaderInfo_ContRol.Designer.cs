@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.ReaderSearch_btn = new CCWin.SkinControl.SkinButton();
             this.ReaderId_tb = new CCWin.SkinControl.SkinTextBox();
@@ -41,8 +41,9 @@
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.ReaderInfo_Dgv = new CCWin.SkinControl.SkinDataGridView();
             this.ReaderInfo_Cms = new CCWin.SkinControl.SkinContextMenuStrip();
-            this.ReaderUpD_Tsm = new System.Windows.Forms.ToolStripMenuItem();
             this.ReaderAdd_Tsm = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReaderUpD_Tsm = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReaderDel_Tsm = new System.Windows.Forms.ToolStripMenuItem();
             this.skinPanel1.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReaderInfo_Dgv)).BeginInit();
@@ -168,31 +169,31 @@
             this.ReaderInfo_Dgv.AllowUserToDeleteRows = false;
             this.ReaderInfo_Dgv.AllowUserToResizeColumns = false;
             this.ReaderInfo_Dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.ReaderInfo_Dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.ReaderInfo_Dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ReaderInfo_Dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ReaderInfo_Dgv.BackgroundColor = System.Drawing.SystemColors.Window;
             this.ReaderInfo_Dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ReaderInfo_Dgv.ColumnFont = null;
             this.ReaderInfo_Dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReaderInfo_Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReaderInfo_Dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.ReaderInfo_Dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReaderInfo_Dgv.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ReaderInfo_Dgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ReaderInfo_Dgv.DefaultCellStyle = dataGridViewCellStyle7;
             this.ReaderInfo_Dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReaderInfo_Dgv.EnableHeadersVisualStyles = false;
             this.ReaderInfo_Dgv.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -205,11 +206,11 @@
             this.ReaderInfo_Dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.ReaderInfo_Dgv.RowHeadersVisible = false;
             this.ReaderInfo_Dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.ReaderInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ReaderInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ReaderInfo_Dgv.RowTemplate.Height = 23;
             this.ReaderInfo_Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ReaderInfo_Dgv.Size = new System.Drawing.Size(927, 421);
@@ -217,6 +218,7 @@
             this.ReaderInfo_Dgv.TitleBack = null;
             this.ReaderInfo_Dgv.TitleBackColorBegin = System.Drawing.Color.White;
             this.ReaderInfo_Dgv.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.ReaderInfo_Dgv.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ReaderInfo_Dgv_CellMouseUp);
             // 
             // ReaderInfo_Cms
             // 
@@ -236,30 +238,38 @@
             this.ReaderInfo_Cms.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             this.ReaderInfo_Cms.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ReaderAdd_Tsm,
-            this.ReaderUpD_Tsm});
+            this.ReaderUpD_Tsm,
+            this.ReaderDel_Tsm});
             this.ReaderInfo_Cms.ItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
             this.ReaderInfo_Cms.Name = "skinContextMenuStrip1";
             this.ReaderInfo_Cms.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.ReaderInfo_Cms.Size = new System.Drawing.Size(125, 48);
+            this.ReaderInfo_Cms.Size = new System.Drawing.Size(181, 92);
             this.ReaderInfo_Cms.SkinAllColor = true;
             this.ReaderInfo_Cms.TitleAnamorphosis = true;
             this.ReaderInfo_Cms.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
             this.ReaderInfo_Cms.TitleRadius = 4;
             this.ReaderInfo_Cms.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // ReaderUpD_Tsm
-            // 
-            this.ReaderUpD_Tsm.Name = "ReaderUpD_Tsm";
-            this.ReaderUpD_Tsm.Size = new System.Drawing.Size(124, 22);
-            this.ReaderUpD_Tsm.Text = "修改读者";
-            this.ReaderUpD_Tsm.Click += new System.EventHandler(this.ReaderUpD_Tsm_Click);
-            // 
             // ReaderAdd_Tsm
             // 
             this.ReaderAdd_Tsm.Name = "ReaderAdd_Tsm";
-            this.ReaderAdd_Tsm.Size = new System.Drawing.Size(124, 22);
-            this.ReaderAdd_Tsm.Text = "添加读者";
+            this.ReaderAdd_Tsm.Size = new System.Drawing.Size(180, 22);
+            this.ReaderAdd_Tsm.Text = "添加";
             this.ReaderAdd_Tsm.Click += new System.EventHandler(this.ReaderAdd_Tsm_Click);
+            // 
+            // ReaderUpD_Tsm
+            // 
+            this.ReaderUpD_Tsm.Name = "ReaderUpD_Tsm";
+            this.ReaderUpD_Tsm.Size = new System.Drawing.Size(180, 22);
+            this.ReaderUpD_Tsm.Text = "修改";
+            this.ReaderUpD_Tsm.Click += new System.EventHandler(this.ReaderUpD_Tsm_Click);
+            // 
+            // ReaderDel_Tsm
+            // 
+            this.ReaderDel_Tsm.Name = "ReaderDel_Tsm";
+            this.ReaderDel_Tsm.Size = new System.Drawing.Size(180, 22);
+            this.ReaderDel_Tsm.Text = "删除";
+            this.ReaderDel_Tsm.Click += new System.EventHandler(this.ReaderDel_Tsm_Click);
             // 
             // ReaderInfo_ContRol
             // 
@@ -290,5 +300,6 @@
         private CCWin.SkinControl.SkinContextMenuStrip ReaderInfo_Cms;
         private System.Windows.Forms.ToolStripMenuItem ReaderUpD_Tsm;
         private System.Windows.Forms.ToolStripMenuItem ReaderAdd_Tsm;
+        private System.Windows.Forms.ToolStripMenuItem ReaderDel_Tsm;
     }
 }

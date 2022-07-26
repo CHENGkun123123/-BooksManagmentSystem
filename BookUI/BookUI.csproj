@@ -111,8 +111,14 @@
     <Compile Include="ChildForm\BookInfoAddAndUpd_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForm\BookInfoAddAndUpd_Form.Designer.cs">
+    <Compile Include="ChildForm\BookInfoAddAndUpd_Form.designer.cs">
       <DependentUpon>BookInfoAddAndUpd_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForm\ReaderInfoAddAndUpd_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm\ReaderInfoAddAndUpd_Form.Designer.cs">
+      <DependentUpon>ReaderInfoAddAndUpd_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm\Login_Form.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForm\BookInfoAddAndUpd_Form.resx">
       <DependentUpon>BookInfoAddAndUpd_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForm\ReaderInfoAddAndUpd_Form.resx">
+      <DependentUpon>ReaderInfoAddAndUpd_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm\Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

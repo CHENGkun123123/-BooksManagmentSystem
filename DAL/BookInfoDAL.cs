@@ -72,7 +72,7 @@ namespace DAL
         }
 
         /// <summary>
-        /// 连表获取图书信息
+        /// 连表根据图书类别获取图书信息
         /// </summary>
         /// <returns></returns>
         public DataTable GetCategoryIdBookInfo(string categoryId)
@@ -128,5 +128,6 @@ namespace DAL
             };
             return SqlDBHelper.ExecuteDataTable(sql, pars);
         }
+
     }
 }
