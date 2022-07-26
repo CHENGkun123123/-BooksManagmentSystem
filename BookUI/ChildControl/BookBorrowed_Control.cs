@@ -107,7 +107,7 @@ namespace BookUI.ChildControl
         /// <param name="e"></param>
         private void Return_Btn_Click(object sender, EventArgs e)
         {
-            if (IsCikeValueNotNull())
+            if (IsBorrowReturnInfoNotNull())
             {
                 //获取用户点击的单元格行索引
                 int index = this.BorrowReturnInfo_Dgv.SelectedCells[0].RowIndex;
@@ -131,7 +131,7 @@ namespace BookUI.ChildControl
         private void Borrow_Btn_Click(object sender, EventArgs e)
         {
 
-            if (IsCikeValueNotNull())
+            if (IsBookInfoNotNull())
             {
                 //获取用户点击的单元格行索引
                 int index = this.BookInfo_Dgv.SelectedCells[0].RowIndex;
@@ -148,22 +148,31 @@ namespace BookUI.ChildControl
 
         }
         /// <summary>
-        /// 判断是否有数据
+        /// 判断是否有借还记录
         /// </summary>
-        private bool IsCikeValueNotNull()
+        private bool IsBorrowReturnInfoNotNull()
         {
             if (this.BorrowReturnInfo_Dgv.RowCount == 0)
             {
                 MessageBox.Show("记录不存在");
                 return false;
             }
-            else if (this.BookInfo_Dgv.RowCount == 0)
+            return true;
+
+        }
+
+        /// <summary>
+        /// 判断是否存在图书
+        /// </summary>
+        /// <returns></returns>
+        private bool IsBookInfoNotNull()
+        {
+            if (this.BookInfo_Dgv.RowCount == 0)
             {
                 MessageBox.Show("图书不存在");
                 return false;
             }
             return true;
-
         }
     }
 }

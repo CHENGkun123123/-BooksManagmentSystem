@@ -144,17 +144,29 @@ namespace BookUI.ChildForm
             //获取当前行的id
             int bookId = (int)this.BookInfo_dgv.Rows[index].Cells[2].Value;
 
-            if (this.BookInfo_dgv.Columns[e.ColumnIndex].Name == "Modify_btn")//修改按钮点击事件
+            IsDelOrUpd(bookId, this.BookInfo_dgv.Columns[e.ColumnIndex].Name);
+        }
+
+        /// <summary>
+        /// 判断执行删除还是修改方法
+        /// </summary>
+        /// <param name="e"></param>
+        /// <param name="bookId"></param>
+        private void IsDelOrUpd(int bookId,string name)
+        {
+            if (name == "Modify_btn")//修改按钮点击事件
             {
                 Func<BookInfoModel> _action = new Func<BookInfoModel>(UpdDefaultMes);
 
                 //窗口显示
-                using (BookInfoAddAndUpd_Form add_Form = new BookInfoAddAndUpd_Form(this.BookInfo_dgv.Columns[e.ColumnIndex].Name, _action))
+                using (BookInfoAddAndUpd_Form add_Form = new BookInfoAddAndUpd_Form(name, _action))
                 {
                     add_Form.ShowDialog();
                 };
+                //刷新数据
+                MyBookInfoDataSource(null);
             }
-            else if (this.BookInfo_dgv.Columns[e.ColumnIndex].Name == "del_btn")//删除按钮点击事件
+            else if (name == "del_btn")//删除按钮点击事件
             {
                 //执行删除
                 MessageEnum mes = bookInfoBLL.DelBook(bookId);
@@ -162,9 +174,9 @@ namespace BookUI.ChildForm
                 {
                     MessageBox.Show(EnumHelper.GetDescription(mes));
                 }
+                //刷新数据
+                MyBookInfoDataSource(null);
             }
-            //刷新数据
-            MyBookInfoDataSource(null);
         }
 
 

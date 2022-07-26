@@ -38,16 +38,10 @@ namespace BookUI.ChildControl
         /// </summary>
         private void MyDgvBtn()
         {
-            //添加修改按钮
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.Name = "Modify_btn";
-            btn.HeaderText = "操作";
-            btn.DefaultCellStyle.NullValue = "修改";
-            this.ReaderInfo_Dgv.Columns.Add(btn);
             //删除按钮
             DataGridViewButtonColumn delbtn = new DataGridViewButtonColumn();
             delbtn.Name = "del_btn";
-            delbtn.HeaderText = "";
+            delbtn.HeaderText = "操作";
             delbtn.DefaultCellStyle.NullValue = "删除";
             this.ReaderInfo_Dgv.Columns.Add(delbtn);
         }
@@ -70,6 +64,26 @@ namespace BookUI.ChildControl
                     MyReaderDataSource();
                 }
             }
+        }
+
+        /// <summary>
+        /// 添加读者点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReaderAdd_Tsm_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 修改读者点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReaderUpD_Tsm_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
