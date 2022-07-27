@@ -11,7 +11,8 @@ namespace BookUI.ChildControl
         /// <summary>
         /// 图书相关业务类
         /// </summary>
-        BookInfoBLL bookInfoBLL = new BookInfoBLL();
+        BookInfo_BLL bookInfoBLL = new BookInfo_BLL();
+
         /// <summary>
         /// 默认构造
         /// </summary>
@@ -22,6 +23,7 @@ namespace BookUI.ChildControl
             MyBorrowDataSource();
         }
 
+        #region 方法
         /// <summary>
         /// 生成数据源
         /// </summary>
@@ -30,7 +32,9 @@ namespace BookUI.ChildControl
             //绑定数据源
             this.BorrowReturnInfo_Dgv.DataSource = bookInfoBLL.FindBookBorrowInfo();
         }
+        #endregion
 
+        #region 事件
         /// <summary>
         /// 控件加载时发生事件
         /// </summary>
@@ -40,5 +44,9 @@ namespace BookUI.ChildControl
         {
             MyBorrowDataSource();
         }
+        #endregion
+
+
+
     }
 }

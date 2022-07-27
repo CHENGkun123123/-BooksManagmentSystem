@@ -29,106 +29,106 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AdminIdChk = new CCWin.SkinControl.SkinTextBox();
-            this.AdminPwdChk = new CCWin.SkinControl.SkinTextBox();
+            this.AdminId_Tb = new CCWin.SkinControl.SkinTextBox();
+            this.AdminPwd_Tb = new CCWin.SkinControl.SkinTextBox();
             this.LoginBtn = new CCWin.SkinControl.SkinButton();
             this.SuspendLayout();
             // 
-            // AdminIdChk
+            // AdminId_Tb
             // 
-            this.AdminIdChk.BackColor = System.Drawing.Color.Transparent;
-            this.AdminIdChk.DownBack = null;
-            this.AdminIdChk.Icon = null;
-            this.AdminIdChk.IconIsButton = false;
-            this.AdminIdChk.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.AdminIdChk.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.AdminIdChk.IsPasswordChat = '\0';
-            this.AdminIdChk.IsSystemPasswordChar = false;
-            this.AdminIdChk.Lines = new string[] {
+            this.AdminId_Tb.BackColor = System.Drawing.Color.Transparent;
+            this.AdminId_Tb.DownBack = null;
+            this.AdminId_Tb.Icon = null;
+            this.AdminId_Tb.IconIsButton = false;
+            this.AdminId_Tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.AdminId_Tb.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.AdminId_Tb.IsPasswordChat = '\0';
+            this.AdminId_Tb.IsSystemPasswordChar = false;
+            this.AdminId_Tb.Lines = new string[] {
         "点击输入用户名"};
-            this.AdminIdChk.Location = new System.Drawing.Point(149, 133);
-            this.AdminIdChk.Margin = new System.Windows.Forms.Padding(0);
-            this.AdminIdChk.MaxLength = 32767;
-            this.AdminIdChk.MinimumSize = new System.Drawing.Size(28, 28);
-            this.AdminIdChk.MouseBack = null;
-            this.AdminIdChk.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.AdminIdChk.Multiline = false;
-            this.AdminIdChk.Name = "AdminIdChk";
-            this.AdminIdChk.NormlBack = null;
-            this.AdminIdChk.Padding = new System.Windows.Forms.Padding(5);
-            this.AdminIdChk.ReadOnly = false;
-            this.AdminIdChk.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AdminIdChk.Size = new System.Drawing.Size(232, 28);
+            this.AdminId_Tb.Location = new System.Drawing.Point(149, 133);
+            this.AdminId_Tb.Margin = new System.Windows.Forms.Padding(0);
+            this.AdminId_Tb.MaxLength = 32767;
+            this.AdminId_Tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.AdminId_Tb.MouseBack = null;
+            this.AdminId_Tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.AdminId_Tb.Multiline = false;
+            this.AdminId_Tb.Name = "AdminId_Tb";
+            this.AdminId_Tb.NormlBack = null;
+            this.AdminId_Tb.Padding = new System.Windows.Forms.Padding(5);
+            this.AdminId_Tb.ReadOnly = false;
+            this.AdminId_Tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AdminId_Tb.Size = new System.Drawing.Size(232, 28);
             // 
             // 
             // 
-            this.AdminIdChk.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AdminIdChk.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminIdChk.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 8.75F);
-            this.AdminIdChk.SkinTxt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.AdminIdChk.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.AdminIdChk.SkinTxt.Name = "BaseText";
-            this.AdminIdChk.SkinTxt.Size = new System.Drawing.Size(222, 16);
-            this.AdminIdChk.SkinTxt.TabIndex = 0;
-            this.AdminIdChk.SkinTxt.Text = "点击输入用户名";
-            this.AdminIdChk.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.AdminIdChk.SkinTxt.WaterText = "";
-            this.AdminIdChk.TabIndex = 0;
-            this.AdminIdChk.Text = "点击输入用户名";
-            this.AdminIdChk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.AdminIdChk.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.AdminIdChk.WaterText = "";
-            this.AdminIdChk.WordWrap = true;
-            this.AdminIdChk.Enter += new System.EventHandler(this.AdminIdChk_Enter);
-            this.AdminIdChk.Leave += new System.EventHandler(this.AdminIdChk_Leave);
+            this.AdminId_Tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AdminId_Tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminId_Tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 8.75F);
+            this.AdminId_Tb.SkinTxt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.AdminId_Tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.AdminId_Tb.SkinTxt.Name = "BaseText";
+            this.AdminId_Tb.SkinTxt.Size = new System.Drawing.Size(222, 16);
+            this.AdminId_Tb.SkinTxt.TabIndex = 0;
+            this.AdminId_Tb.SkinTxt.Text = "点击输入用户名";
+            this.AdminId_Tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.AdminId_Tb.SkinTxt.WaterText = "";
+            this.AdminId_Tb.TabIndex = 0;
+            this.AdminId_Tb.Text = "点击输入用户名";
+            this.AdminId_Tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.AdminId_Tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.AdminId_Tb.WaterText = "";
+            this.AdminId_Tb.WordWrap = true;
+            this.AdminId_Tb.Enter += new System.EventHandler(this.AdminIdChk_Enter);
+            this.AdminId_Tb.Leave += new System.EventHandler(this.AdminIdChk_Leave);
             // 
-            // AdminPwdChk
+            // AdminPwd_Tb
             // 
-            this.AdminPwdChk.BackColor = System.Drawing.Color.Transparent;
-            this.AdminPwdChk.DownBack = null;
-            this.AdminPwdChk.Icon = null;
-            this.AdminPwdChk.IconIsButton = false;
-            this.AdminPwdChk.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.AdminPwdChk.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.AdminPwdChk.IsPasswordChat = '\0';
-            this.AdminPwdChk.IsSystemPasswordChar = false;
-            this.AdminPwdChk.Lines = new string[] {
+            this.AdminPwd_Tb.BackColor = System.Drawing.Color.Transparent;
+            this.AdminPwd_Tb.DownBack = null;
+            this.AdminPwd_Tb.Icon = null;
+            this.AdminPwd_Tb.IconIsButton = false;
+            this.AdminPwd_Tb.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.AdminPwd_Tb.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.AdminPwd_Tb.IsPasswordChat = '\0';
+            this.AdminPwd_Tb.IsSystemPasswordChar = false;
+            this.AdminPwd_Tb.Lines = new string[] {
         "点击输入密码"};
-            this.AdminPwdChk.Location = new System.Drawing.Point(149, 182);
-            this.AdminPwdChk.Margin = new System.Windows.Forms.Padding(0);
-            this.AdminPwdChk.MaxLength = 32767;
-            this.AdminPwdChk.MinimumSize = new System.Drawing.Size(28, 28);
-            this.AdminPwdChk.MouseBack = null;
-            this.AdminPwdChk.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.AdminPwdChk.Multiline = false;
-            this.AdminPwdChk.Name = "AdminPwdChk";
-            this.AdminPwdChk.NormlBack = null;
-            this.AdminPwdChk.Padding = new System.Windows.Forms.Padding(5);
-            this.AdminPwdChk.ReadOnly = false;
-            this.AdminPwdChk.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.AdminPwdChk.Size = new System.Drawing.Size(232, 28);
+            this.AdminPwd_Tb.Location = new System.Drawing.Point(149, 182);
+            this.AdminPwd_Tb.Margin = new System.Windows.Forms.Padding(0);
+            this.AdminPwd_Tb.MaxLength = 32767;
+            this.AdminPwd_Tb.MinimumSize = new System.Drawing.Size(28, 28);
+            this.AdminPwd_Tb.MouseBack = null;
+            this.AdminPwd_Tb.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.AdminPwd_Tb.Multiline = false;
+            this.AdminPwd_Tb.Name = "AdminPwd_Tb";
+            this.AdminPwd_Tb.NormlBack = null;
+            this.AdminPwd_Tb.Padding = new System.Windows.Forms.Padding(5);
+            this.AdminPwd_Tb.ReadOnly = false;
+            this.AdminPwd_Tb.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AdminPwd_Tb.Size = new System.Drawing.Size(232, 28);
             // 
             // 
             // 
-            this.AdminPwdChk.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AdminPwdChk.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdminPwdChk.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 8.75F);
-            this.AdminPwdChk.SkinTxt.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.AdminPwdChk.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.AdminPwdChk.SkinTxt.Name = "BaseText";
-            this.AdminPwdChk.SkinTxt.Size = new System.Drawing.Size(222, 16);
-            this.AdminPwdChk.SkinTxt.TabIndex = 0;
-            this.AdminPwdChk.SkinTxt.Text = "点击输入密码";
-            this.AdminPwdChk.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.AdminPwdChk.SkinTxt.WaterText = "";
-            this.AdminPwdChk.TabIndex = 0;
-            this.AdminPwdChk.Text = "点击输入密码";
-            this.AdminPwdChk.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.AdminPwdChk.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.AdminPwdChk.WaterText = "";
-            this.AdminPwdChk.WordWrap = true;
-            this.AdminPwdChk.Enter += new System.EventHandler(this.AdminPwdChk_Enter);
-            this.AdminPwdChk.Leave += new System.EventHandler(this.AdminPwdChk_Leave);
+            this.AdminPwd_Tb.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AdminPwd_Tb.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdminPwd_Tb.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 8.75F);
+            this.AdminPwd_Tb.SkinTxt.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.AdminPwd_Tb.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.AdminPwd_Tb.SkinTxt.Name = "BaseText";
+            this.AdminPwd_Tb.SkinTxt.Size = new System.Drawing.Size(222, 16);
+            this.AdminPwd_Tb.SkinTxt.TabIndex = 0;
+            this.AdminPwd_Tb.SkinTxt.Text = "点击输入密码";
+            this.AdminPwd_Tb.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.AdminPwd_Tb.SkinTxt.WaterText = "";
+            this.AdminPwd_Tb.TabIndex = 1;
+            this.AdminPwd_Tb.Text = "点击输入密码";
+            this.AdminPwd_Tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.AdminPwd_Tb.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.AdminPwd_Tb.WaterText = "";
+            this.AdminPwd_Tb.WordWrap = true;
+            this.AdminPwd_Tb.Enter += new System.EventHandler(this.AdminPwdChk_Enter);
+            this.AdminPwd_Tb.Leave += new System.EventHandler(this.AdminPwdChk_Leave);
             // 
             // LoginBtn
             // 
@@ -140,12 +140,12 @@
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.NormlBack = null;
             this.LoginBtn.Size = new System.Drawing.Size(75, 23);
-            this.LoginBtn.TabIndex = 1;
+            this.LoginBtn.TabIndex = 2;
             this.LoginBtn.Text = "确认登录";
             this.LoginBtn.UseVisualStyleBackColor = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // Login
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,12 +155,12 @@
             this.CaptionFont = new System.Drawing.Font("幼圆", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ClientSize = new System.Drawing.Size(500, 350);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.AdminPwdChk);
-            this.Controls.Add(this.AdminIdChk);
+            this.Controls.Add(this.AdminPwd_Tb);
+            this.Controls.Add(this.AdminId_Tb);
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "Login_Form";
             this.Shadow = false;
             this.ShowBorder = false;
             this.ShowDrawIcon = false;
@@ -173,8 +173,8 @@
 
         #endregion
 
-        private CCWin.SkinControl.SkinTextBox AdminIdChk;
-        private CCWin.SkinControl.SkinTextBox AdminPwdChk;
+        private CCWin.SkinControl.SkinTextBox AdminId_Tb;
+        private CCWin.SkinControl.SkinTextBox AdminPwd_Tb;
         private CCWin.SkinControl.SkinButton LoginBtn;
     }
 }

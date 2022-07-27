@@ -16,11 +16,11 @@ namespace BookUI.ChildControl
         /// <summary>
         /// 读者信息业务类
         /// </summary>
-        ReaderInfoBLL readerInfoBLL = new ReaderInfoBLL();
+        ReaderInfo_BLL readerInfoBLL = new ReaderInfo_BLL();
         /// <summary>
         /// 图书信息业务类
         /// </summary>
-        BookInfoBLL bookInfoBLL = new BookInfoBLL();
+        BookInfo_BLL bookInfoBLL = new BookInfo_BLL();
 
         /// <summary>
         /// 默认构造
@@ -29,21 +29,8 @@ namespace BookUI.ChildControl
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// 读者id确定按钮点击事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ReaderOk_Btn_Click(object sender, System.EventArgs e)
-        {
-            if (ControlUtils.TextBoxCheckIsNull(skinPanel1.Controls))
-            {
-                //控件属性设置显示
-                IsControlVisble();
-            }
-        }
 
-
+        #region 方法
         /// <summary>
         /// 获取读者信息并设置控件属性显示
         /// </summary>
@@ -74,15 +61,7 @@ namespace BookUI.ChildControl
                 MessageBox.Show("读者不存在");
             }
         }
-        /// <summary>
-        /// 图书id确定按钮点击事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Book_OK_Btn_Click(object sender, System.EventArgs e)
-        {
-            GetBooksInfo(this.BookId_tb.Text);
-        }
+
         /// <summary>
         /// 获取图书信息数据源
         /// </summary>
@@ -92,61 +71,16 @@ namespace BookUI.ChildControl
             //隐藏
             this.BookInfo_Dgv.Columns["图书类别id"].Visible = false;
         }
+
         /// <summary>
         /// 获取图书借书记录
         /// </summary>
         private void GetBorrowInfo(string readerid)
         {
             this.BorrowReturnInfo_Dgv.DataSource = bookInfoBLL.FindBookBorrowInfo(readerid);
+            this.BorrowReturnInfo_Dgv.Sort
         }
 
-        /// <summary>
-        /// 还书按钮
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Return_Btn_Click(object sender, EventArgs e)
-        {
-            if (IsBorrowReturnInfoNotNull())
-            {
-                //获取用户点击的单元格行索引
-                int index = this.BorrowReturnInfo_Dgv.SelectedCells[0].RowIndex;
-                //获取当前行的读者id
-                string readerId = this.BorrowReturnInfo_Dgv.Rows[index].Cells[1].Value.ToString();
-                //获取当前行的图书id
-                string bookId = this.BorrowReturnInfo_Dgv.Rows[index].Cells[2].Value.ToString();
-                MessageBox.Show(EnumHelper.GetDescription(bookInfoBLL.UpDBorrowTime(readerId, bookId)));
-                //生成图书数据源
-                GetBooksInfo(null);
-                //生成借还记录数据源
-                GetBorrowInfo(this.ReaderId_tb.Text);
-            }
-
-        }
-        /// <summary>
-        /// 借书按钮
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Borrow_Btn_Click(object sender, EventArgs e)
-        {
-
-            if (IsBookInfoNotNull())
-            {
-                //获取用户点击的单元格行索引
-                int index = this.BookInfo_Dgv.SelectedCells[0].RowIndex;
-                //获取当的读者id
-                string readerId = this.ReaderId_tb.Text;
-                //获取当前行的图书id
-                string bookId = this.BookInfo_Dgv.Rows[index].Cells[4].Value.ToString();
-                MessageBox.Show(EnumHelper.GetDescription(bookInfoBLL.UpDReturnTime(readerId, bookId)));
-                //生成图书数据源
-                GetBooksInfo(null);
-                //生成借还记录数据源
-                GetBorrowInfo(this.ReaderId_tb.Text);
-            }
-
-        }
         /// <summary>
         /// 判断是否有借还记录
         /// </summary>
@@ -174,5 +108,81 @@ namespace BookUI.ChildControl
             }
             return true;
         }
+        #endregion
+
+        #region 事件
+        /// <summary>
+        /// 读者id确定按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReaderOk_Btn_Click(object sender, System.EventArgs e)
+        {
+            if (ControlUtils.TextBoxCheckIsNull(skinPanel1.Controls))
+            {
+                //控件属性设置显示
+                IsControlVisble();
+            }
+        }
+        
+        /// <summary>
+        /// 图书id确定按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Book_OK_Btn_Click(object sender, System.EventArgs e)
+        {
+            GetBooksInfo(this.BookId_tb.Text);
+        }
+        
+        /// <summary>
+        /// 还书按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Return_Btn_Click(object sender, EventArgs e)
+        {
+            if (IsBorrowReturnInfoNotNull())
+            {
+                //获取用户点击的单元格行索引
+                int index = this.BorrowReturnInfo_Dgv.SelectedCells[0].RowIndex;
+                //获取当前行的读者id
+                string readerId = this.BorrowReturnInfo_Dgv.Rows[index].Cells[1].Value.ToString();
+                //获取当前行的图书id
+                string bookId = this.BorrowReturnInfo_Dgv.Rows[index].Cells[2].Value.ToString();
+                MessageBox.Show(EnumHelper.GetDescription(bookInfoBLL.UpDBorrowTime(readerId, bookId)));
+                //生成图书数据源
+                GetBooksInfo(null);
+                //生成借还记录数据源
+                GetBorrowInfo(this.ReaderId_tb.Text);
+            }
+
+        } 
+        
+        /// <summary>
+        /// 借书按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Borrow_Btn_Click(object sender, EventArgs e)
+        {
+
+            if (IsBookInfoNotNull())
+            {
+                //获取用户点击的单元格行索引
+                int index = this.BookInfo_Dgv.SelectedCells[0].RowIndex;
+                //获取当的读者id
+                string readerId = this.ReaderId_tb.Text;
+                //获取当前行的图书id
+                string bookId = this.BookInfo_Dgv.Rows[index].Cells[4].Value.ToString();
+                MessageBox.Show(EnumHelper.GetDescription(bookInfoBLL.UpDReturnTime(readerId, bookId)));
+                //生成图书数据源
+                GetBooksInfo(null);
+                //生成借还记录数据源
+                GetBorrowInfo(this.ReaderId_tb.Text);
+            }
+
+        }
+        #endregion
     }
 }

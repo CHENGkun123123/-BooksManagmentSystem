@@ -10,14 +10,14 @@ namespace DAL
     /// <summary>
     /// 图书信息表数据访问类
     /// </summary>
-    public class BookInfoDAL
+    public class BookInfo_DAL
     {
         /// <summary>
         /// 添加图书信息
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public int BookAdd(BookInfoModel model)
+        public int BookAdd(BookInfo_Model model)
         {
             string sql = "Insert Into BookInfo Values(@Name,@CategoryType,@Author,@Money,@BookID,@State)";
 
@@ -55,7 +55,7 @@ namespace DAL
         /// 修改图书信息
         /// </summary>
         /// <returns></returns>
-        public int BookUpd(BookInfoModel model)
+        public int BookUpd(BookInfo_Model model)
         {
             string sql = @"UPDATE BookInfo SET Name=@Name,CategoryType=@CategoryType,Author=@Author,Money=@Money WHERE ID=@ID";
 
@@ -123,7 +123,7 @@ namespace DAL
                            WHERE a.State = @State AND a.BookID like @BookID";
             SqlParameter[] pars =
             {
-                new SqlParameter("@State",BookStateEnum.Default_State),
+                new SqlParameter("@State",BookState_Enum.Default_State),
                 new SqlParameter("@BookID",$"%{bookId}%")
             };
             return SqlDBHelper.ExecuteDataTable(sql, pars);

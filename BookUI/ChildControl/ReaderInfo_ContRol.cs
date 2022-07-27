@@ -16,7 +16,7 @@ namespace BookUI.ChildControl
         /// <summary>
         /// 读者信息业务类
         /// </summary>
-        ReaderInfoBLL readerInfoBLL = new ReaderInfoBLL();
+        ReaderInfo_BLL readerInfoBLL = new ReaderInfo_BLL();
 
         /// <summary>
         /// 默认构造
@@ -25,8 +25,10 @@ namespace BookUI.ChildControl
         {
             InitializeComponent();
             //生成数据源
-            MyReaderDataSource(); 
+            MyReaderDataSource();
         }
+
+        #region 方法
         /// <summary>
         /// 获取数据源
         /// </summary>
@@ -36,6 +38,27 @@ namespace BookUI.ChildControl
             this.ReaderInfo_Dgv.DataSource = readerInfoBLL.FindReaders();
         }
 
+        /// <summary>
+        /// 获取选中行读者参数
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        private ReaderInfoModel UpdDefaultMes()
+        {
+            //获取选中行读者编号单元格的值
+            int idex = ReaderInfo_Dgv.CurrentRow.Index;
+            int id = (int)ReaderInfo_Dgv.Rows[idex].Cells["ID"].Value;
+            string readName = ReaderInfo_Dgv.Rows[idex].Cells["读者姓名"].Value.ToString();
+            string email = ReaderInfo_Dgv.Rows[idex].Cells["读者邮箱"].Value.ToString();
+            string address = ReaderInfo_Dgv.Rows[idex].Cells["读者地址"].Value.ToString();
+            string mobile = ReaderInfo_Dgv.Rows[idex].Cells["读者电话"].Value.ToString();
+
+            ReaderInfoModel model = new ReaderInfoModel(id, readName, email, address, mobile);
+            return model;
+        }
+        #endregion
+
+        #region 事件
         /// <summary>
         /// 搜索
         /// </summary>
@@ -48,7 +71,7 @@ namespace BookUI.ChildControl
             {
                 this.ReaderInfo_Dgv.DataSource = readerInfoBLL.FindReaders(this.ReaderId_tb.Text);
                 //查询结果为空时刷新数据
-                if (this.ReaderInfo_Dgv.Rows.Count==0)
+                if (this.ReaderInfo_Dgv.Rows.Count == 0)
                 {
                     MessageBox.Show("该读者不存在");
                     MyReaderDataSource();
@@ -131,24 +154,6 @@ namespace BookUI.ChildControl
                 MyReaderDataSource();
             }
         }
-
-        /// <summary>
-        /// 获取选中行读者参数
-        /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
-        private ReaderInfoModel UpdDefaultMes()
-        {
-            //获取选中行读者编号单元格的值
-            int idex = ReaderInfo_Dgv.CurrentRow.Index;
-            int id = (int)ReaderInfo_Dgv.Rows[idex].Cells["ID"].Value;
-            string readName = ReaderInfo_Dgv.Rows[idex].Cells["读者姓名"].Value.ToString();
-            string email = ReaderInfo_Dgv.Rows[idex].Cells["读者邮箱"].Value.ToString();
-            string address = ReaderInfo_Dgv.Rows[idex].Cells["读者地址"].Value.ToString();
-            string mobile = ReaderInfo_Dgv.Rows[idex].Cells["读者电话"].Value.ToString();
-
-            ReaderInfoModel model = new ReaderInfoModel(id, readName, email, address, mobile);
-            return model;
-        }
+        #endregion
     }
 }

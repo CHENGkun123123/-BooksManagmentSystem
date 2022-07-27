@@ -155,7 +155,9 @@
             // 
             // BookCategory_tvw
             // 
+            this.BookCategory_tvw.BorderColor = System.Drawing.Color.White;
             this.BookCategory_tvw.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookCategory_tvw.LineColor = System.Drawing.Color.White;
             this.BookCategory_tvw.Location = new System.Drawing.Point(0, 0);
             this.BookCategory_tvw.Name = "BookCategory_tvw";
             this.BookCategory_tvw.Size = new System.Drawing.Size(200, 425);
@@ -219,6 +221,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.BookInfo_dgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.BookInfo_dgv.RowTemplate.Height = 23;
+            this.BookInfo_dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BookInfo_dgv.Size = new System.Drawing.Size(649, 425);
             this.BookInfo_dgv.TabIndex = 0;
             this.BookInfo_dgv.TitleBack = null;

@@ -13,7 +13,7 @@ namespace DAL
     /// <summary>
     /// 图书借还表数据访问类
     /// </summary>
-    public class BookBorrowReturnInfoDAL
+    public class BookBorrowReturnInfo_DAL
     {
         /// <summary>
         /// 连表获取借还记录信息
@@ -71,7 +71,7 @@ namespace DAL
             };
             SqlParameter[] pars2 =
             {
-                new SqlParameter("@State",BookStateEnum.Default_State),//未借出状态
+                new SqlParameter("@State",BookState_Enum.Default_State),//未借出状态
                 new SqlParameter("@BookId2",bookId)
             };
             List<SqlParameter[]> parsList = new List<SqlParameter[]>
@@ -106,7 +106,7 @@ namespace DAL
             };
             SqlParameter[] pars2 =
             {
-                new SqlParameter("@State",BookStateEnum.Lend_State),//未借出状态
+                new SqlParameter("@State",BookState_Enum.Lend_State),//未借出状态
                 new SqlParameter("@BookId2",bookId)
             };
             List<SqlParameter[]> parsList = new List<SqlParameter[]>

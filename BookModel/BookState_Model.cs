@@ -3,7 +3,7 @@
     /// <summary>
     /// 图书状态表实体类
     /// </summary>
-    public class BookStateModel : BaseModel
+    public class BookStateModel : Base_Model
     {
         /// <summary>
         /// 默认构造

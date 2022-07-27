@@ -7,7 +7,7 @@ namespace DAL
     /// <summary>
     /// 图书类型表数据访问类
     /// </summary>
-    public class BookCategoryDAL
+    public class BookCategory_DAL
     {
         /// <summary>
         /// 获取子类别信息

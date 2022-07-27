@@ -13,11 +13,13 @@ namespace BookUI.Admin
     {
         /// <summary>
         /// 默认构造方法
-        public SystemHome_From()
+        public SystemHome_From(string name)
         {
             InitializeComponent();
+            this.AdminName.Text += $"{name}已登录";
         }
 
+        #region 事件
         /// <summary>
         /// 图书管理窗体活动时发生
         /// </summary>
@@ -70,6 +72,46 @@ namespace BookUI.Admin
             this.skinPanel4.Controls.Add(bookBorrowed_Control);
         }
 
-     
+        /// <summary>
+        /// 跳转图书管理按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            this.TabControl1.SelectedTab = this.tabPage1;
+        }
+
+        /// <summary>
+        /// 跳转读者管理按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            this.TabControl1.SelectedTab = this.tabPage2;
+        }
+
+        /// <summary>
+        /// 跳转借还记录按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            this.TabControl1.SelectedTab = this.tabPage3;
+        }
+
+        /// <summary>
+        /// 跳转借书还书按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.TabControl1.SelectedTab = this.tabPage4;
+        }
+        #endregion
+
     }
 }

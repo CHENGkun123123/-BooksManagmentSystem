@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminInfoModel.cs" />
-    <Compile Include="BaseModel.cs" />
-    <Compile Include="BookBorrowReturnInfoModel.cs" />
-    <Compile Include="BookCategoryModel.cs" />
-    <Compile Include="BookInfoModel.cs" />
-    <Compile Include="BookStateModel.cs" />
+    <Compile Include="AdminInfo_Model.cs" />
+    <Compile Include="Base_Model.cs" />
+    <Compile Include="BookBorrowReturnInfo_Model.cs" />
+    <Compile Include="BookCategory_Model.cs" />
+    <Compile Include="BookInfo_Model.cs" />
+    <Compile Include="BookState_Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReaderInfoModel.cs" />
+    <Compile Include="ReaderInfo_Model.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

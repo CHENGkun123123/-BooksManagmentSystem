@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminInfoDAL.cs" />
-    <Compile Include="BookBorrowReturnInfoDAL.cs" />
-    <Compile Include="ReaderInfoDAL.cs" />
-    <Compile Include="BookCategoryDAL.cs" />
-    <Compile Include="BookInfoDAL.cs" />
+    <Compile Include="AdminInfo_DAL.cs" />
+    <Compile Include="BookBorrowReturnInfo_DAL.cs" />
+    <Compile Include="ReaderInfo_DAL.cs" />
+    <Compile Include="BookCategory_DAL.cs" />
+    <Compile Include="BookInfo_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

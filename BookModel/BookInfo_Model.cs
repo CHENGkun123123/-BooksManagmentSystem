@@ -3,12 +3,12 @@
     /// <summary>
     /// 图书信息表实体类
     /// </summary>
-    public class BookInfoModel : BaseModel
+    public class BookInfo_Model : Base_Model
     {
         /// <summary>
         /// 默认构造
         /// </summary>
-        public BookInfoModel()
+        public BookInfo_Model()
         {
         }
 
@@ -20,7 +20,7 @@
         /// <param name="author"></param>
         /// <param name="money"></param>
         /// <param name="state"></param>
-        public BookInfoModel(string name, int categoryType, string author, long money, int state)
+        public BookInfo_Model(string name, int categoryType, string author, long money, int state)
         {
             _name = name;
             _categoryType = categoryType;
@@ -35,7 +35,7 @@
         /// <param name="name"></param>
         /// <param name="author"></param>
         /// <param name="money"></param>
-        public BookInfoModel(int id,string name, string author, long money,int bookCategory)
+        public BookInfo_Model(int id,string name, string author, long money,int bookCategory)
         {
             _name = name;
             _author = author;

@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminInfoBLL.cs" />
-    <Compile Include="BookInfoBLL.cs" />
+    <Compile Include="AdminInfo_BLL.cs" />
+    <Compile Include="BookInfo_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReaderInfoBLL.cs" />
+    <Compile Include="ReaderInfo_BLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookModel\BookModel.csproj">

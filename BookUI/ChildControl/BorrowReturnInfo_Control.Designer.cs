@@ -86,6 +86,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.BorrowReturnInfo_Dgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.BorrowReturnInfo_Dgv.RowTemplate.Height = 23;
+            this.BorrowReturnInfo_Dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BorrowReturnInfo_Dgv.Size = new System.Drawing.Size(967, 441);
             this.BorrowReturnInfo_Dgv.TabIndex = 1;
             this.BorrowReturnInfo_Dgv.TitleBack = null;

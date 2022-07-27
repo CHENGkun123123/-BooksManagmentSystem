@@ -8,43 +8,43 @@ using System.Data;
 namespace BookBLL
 {
     /// <summary>
-    /// 管理员信息相关业务类
+    /// 管理员信息业务类
     /// </summary>
-    public class AdminInfoBLL
+    public class AdminInfo_BLL
     {
         /// <summary>
-        /// 管理员信息表数据访问类
+        /// 管理员信息数据访问类
         /// </summary>
-        AdminInfoDAL AdminInfoDAL = new AdminInfoDAL();
+        AdminInfo_DAL AdminInfoDAL = new AdminInfo_DAL();
 
         /// <summary>
         /// 登录验证
         /// </summary>
         /// <param name="admin"></param>
         /// <returns></returns>
-        public LoginStateEnum Login(AdminInfoModel admin)
+        public LoginState_Enum Login(AdminInfo_Model admin)
         {
             //判断用户名和密码是否为空
-            if (string.IsNullOrEmpty(admin.AdminID) || admin.AdminID == EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultNameErr))
+            if (string.IsNullOrEmpty(admin.AdminID) || admin.AdminID == EnumHelper.GetDescription<Enum>(LoginState_Enum.DefaultNameErr))
             {
-                return LoginStateEnum.NameNotErr;
+                return LoginState_Enum.NameNotErr;
             }
-            else if (string.IsNullOrEmpty(admin.AdminPwd) || admin.AdminPwd == EnumHelper.GetDescription<Enum>(LoginStateEnum.DefaultPwdErr))
+            else if (string.IsNullOrEmpty(admin.AdminPwd) || admin.AdminPwd == EnumHelper.GetDescription<Enum>(LoginState_Enum.DefaultPwdErr))
             {
-                return LoginStateEnum.PwdNotErr;
+                return LoginState_Enum.PwdNotErr;
             }
             //创建DataTable容器
             DataTable dataTable = AdminInfoDAL.GetAdminInfo(admin);
             //判断容器是否有内容
             if (dataTable.Rows.Count <= 0)
             {
-                return LoginStateEnum.NameErr;
+                return LoginState_Enum.NameErr;
             }
             else if (MD5Tool.EncryptByMD5(admin.AdminPwd) != dataTable.Rows[0]["AdminPwd"].ToString())//判断密码是否一致
             {
-                return LoginStateEnum.PwdErr;
+                return LoginState_Enum.PwdErr;
             }
-            return LoginStateEnum.ok;
+            return LoginState_Enum.ok;
         }
     }
 }

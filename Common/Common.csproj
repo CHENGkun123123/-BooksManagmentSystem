@@ -47,10 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\BookStateEnum.cs" />
-    <Compile Include="Enum\LoginStateEnum.cs" />
-    <Compile Include="Enum\JudgeEnum.cs" />
-    <Compile Include="Enum\MessageEnum.cs" />
+    <Compile Include="Enum\BookState_Enum.cs" />
+    <Compile Include="Enum\LoginState_Enum.cs" />
+    <Compile Include="Enum\Judge_Enum.cs" />
+    <Compile Include="Enum\Message_Enum.cs" />
     <Compile Include="Helper\SqlDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helper\EnumHelper.cs" />

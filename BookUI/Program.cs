@@ -14,7 +14,14 @@ namespace BookUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SystemHome_From());
+            //登录窗体
+            Login_Form login_Form = new Login_Form();
+            //判断是否登录成功
+            if (login_Form.ShowDialog() == DialogResult.OK)
+            {
+                //启动主页
+                Application.Run(new SystemHome_From(login_Form.Name));
+            }
         }
     }
 }

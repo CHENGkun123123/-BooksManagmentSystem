@@ -6,16 +6,16 @@ using System.Data.SqlClient;
 namespace DAL
 {
     /// <summary>
-    /// 管理员信息表数据访问类
+    /// 管理员信息数据访问类
     /// </summary>
-    public class AdminInfoDAL
+    public class AdminInfo_DAL
     {
         /// <summary>
         /// 根据用户名获取管理员信息
         /// </summary>
         /// <param name="admin">管理员实体类</param>
         /// <returns></returns>
-        public DataTable GetAdminInfo(AdminInfoModel admin)
+        public DataTable GetAdminInfo(AdminInfo_Model admin)
         {
             string sql = "select * from AdminInfo where AdminID = @name";
 

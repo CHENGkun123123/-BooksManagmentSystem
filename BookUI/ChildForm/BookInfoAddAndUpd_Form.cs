@@ -18,73 +18,59 @@ namespace BookUI.ChildForm
         /// <summary>
         /// 图书信息业务层
         /// </summary>
-        BookInfoBLL bookInfo = new BookInfoBLL();
+        BookInfo_BLL bookInfo = new BookInfo_BLL();
         #region 字段
         /// <summary>
         /// 接收按钮名称
         /// </summary>
-        string btnName;
+        private string _btnName;
         /// <summary>
         /// 图书id
         /// </summary>
-        int id;
+        private int _id;
         /// <summary>
         /// 委托用于赋值
         /// </summary>
-        Func<BookInfoModel> _func;
+        private Func<BookInfo_Model> _func;
         #endregion
         #region 属性
         /// <summary>
         /// 委托属性
         /// </summary>
-        public Func<BookInfoModel> Func { get => _func; set => _func = value; }
+        public Func<BookInfo_Model> Func { get => _func; set => _func = value; }
         /// <summary>                                                      
         /// 用于接收按钮名称                                                              
         /// </summary>
-        public string BtnName { get => btnName; set => btnName = value; }
+        public string BtnName { get => _btnName; set => _btnName = value; }
         /// <summary>
         /// 用于接收图书id
         /// </summary>
-        public int Id { get => id; set => id = value; }
+        public int Id { get => _id; set => _id = value; }
         #endregion
         /// <summary>
         /// 默认构造
         /// </summary>
         /// <param name="btnName"></param>
-        public BookInfoAddAndUpd_Form(string btnName, Func<BookInfoModel> func)
+        public BookInfoAddAndUpd_Form(string btnName, Func<BookInfo_Model> func)
         {
             this.BtnName = btnName;
             this.Func = func;
             InitializeComponent();
         }
 
-        /// <summary>
-        /// 图书保存按钮点击事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BookAddBtn_Click(object sender, EventArgs e)
-        {
-            //判断窗体控件是否有空值
-            if (ControlUtils.TextBoxCheckIsNull(this.Controls))
-            {
-                IsUpAdd();
-                this.Close();
-            }
-        }
-
+        #region 方法
         /// <summary>
         /// 判断修改或添加
         /// </summary>
         private void IsUpAdd()
         {
             //赋值
-            BookInfoModel model = new BookInfoModel(
+            BookInfo_Model model = new BookInfo_Model(
            this.BookName_tb.Text
            , (int)this.BookCategorycbo.SelectedValue
            , this.BookAuthor_tb.Text
            , (long)this.BookPricenud.Value
-           , (int)BookStateEnum.Default_State);
+           , (int)BookState_Enum.Default_State);
 
             //判断是添加还是修改
             if (this.BtnName == "BookAdd_Btn")//添加操作
@@ -97,6 +83,23 @@ namespace BookUI.ChildForm
                 model.Id = this.Id;
                 //输出修改图书结果
                 MessageBox.Show(EnumHelper.GetDescription(bookInfo.UpdBook(model)));
+            }
+        }
+        #endregion
+
+        #region 事件
+        /// <summary>
+        /// 图书保存按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BookAddBtn_Click(object sender, EventArgs e)
+        {
+            //判断窗体控件是否有空值
+            if (ControlUtils.TextBoxCheckIsNull(this.Controls))
+            {
+                IsUpAdd();
+                this.Close();
             }
         }
 
@@ -115,7 +118,7 @@ namespace BookUI.ChildForm
             //修改信息赋值
             if (this.BtnName == "Modify_btn")
             {
-                BookInfoModel model = this.Func.Invoke();
+                BookInfo_Model model = this.Func.Invoke();
                 this.BookName_tb.Text = model.Name;
                 this.BookAuthor_tb.Text = model.Author;
                 this.BookPricenud.Value = model.Money;
@@ -124,7 +127,6 @@ namespace BookUI.ChildForm
                 this.Text = "图书修改";
             }
         }
-
-
+        #endregion
     }
 }

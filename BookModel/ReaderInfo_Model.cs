@@ -3,7 +3,7 @@
     /// <summary>
     /// 读者基本信息表实体类
     /// </summary>
-    public class ReaderInfoModel : BaseModel
+    public class ReaderInfoModel : Base_Model
     {
         /// <summary>
         /// 默认构造

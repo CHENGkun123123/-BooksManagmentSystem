@@ -14,7 +14,7 @@ namespace DAL
     /// <summary>
     /// 读者信息表数据访问类
     /// </summary>
-    public class ReaderInfoDAL
+    public class ReaderInfo_DAL
     {
         /// <summary>
         /// 获取读者信息

@@ -3,7 +3,7 @@
     /// <summary>
     /// 图书类型表实体类
     /// </summary>
-    public class BookCategoryModel : BaseModel
+    public class BookCategoryModel : Base_Model
     {
         /// <summary>
         /// 默认构造

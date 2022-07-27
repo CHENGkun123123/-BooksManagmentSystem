@@ -36,6 +36,8 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.TabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LoginMessage = new System.Windows.Forms.StatusStrip();
+            this.AdminName = new System.Windows.Forms.ToolStripStatusLabel();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
@@ -46,6 +48,7 @@
             this.skinToolStrip1.SuspendLayout();
             this.TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.LoginMessage.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -116,6 +119,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(90, 74);
             this.toolStripButton1.Text = "BookMgtImgBtn";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -126,6 +130,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(89, 74);
             this.toolStripButton2.Text = "UserMgtImgBtn";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -136,6 +141,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(92, 74);
             this.toolStripButton3.Text = "RecordImgBtn";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -146,6 +152,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(94, 74);
             this.toolStripButton4.Text = "BorrowedImgBtn";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // TabControl1
             // 
@@ -162,6 +169,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.LoginMessage);
             this.tabPage1.Controls.Add(this.skinPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -172,17 +180,33 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
             // 
+            // LoginMessage
+            // 
+            this.LoginMessage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AdminName});
+            this.LoginMessage.Location = new System.Drawing.Point(3, 516);
+            this.LoginMessage.Name = "LoginMessage";
+            this.LoginMessage.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.LoginMessage.Size = new System.Drawing.Size(1049, 22);
+            this.LoginMessage.SizingGrip = false;
+            this.LoginMessage.TabIndex = 1;
+            // 
+            // AdminName
+            // 
+            this.AdminName.Name = "AdminName";
+            this.AdminName.Size = new System.Drawing.Size(35, 17);
+            this.AdminName.Text = "状态:";
+            // 
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinPanel1.DownBack = null;
             this.skinPanel1.Location = new System.Drawing.Point(3, 3);
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;
-            this.skinPanel1.Size = new System.Drawing.Size(1049, 535);
+            this.skinPanel1.Size = new System.Drawing.Size(1049, 510);
             this.skinPanel1.TabIndex = 0;
             // 
             // tabPage2
@@ -282,6 +306,9 @@
             this.skinToolStrip1.PerformLayout();
             this.TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.LoginMessage.ResumeLayout(false);
+            this.LoginMessage.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
@@ -305,5 +332,7 @@
         private CCWin.SkinControl.SkinPanel skinPanel2;
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private CCWin.SkinControl.SkinPanel skinPanel4;
+        private System.Windows.Forms.StatusStrip LoginMessage;
+        private System.Windows.Forms.ToolStripStatusLabel AdminName;
     }
 }

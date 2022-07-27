@@ -5,12 +5,12 @@ namespace BookModel
     /// <summary>
     /// 借还记录表实体类
     /// </summary>
-    public class BookBorrowReturnInfoModel
+    public class BookBorrowReturnInfo_Model
     {
         /// <summary>
         /// 默认构造
         /// </summary>
-        public BookBorrowReturnInfoModel()
+        public BookBorrowReturnInfo_Model()
         {
         }
 
@@ -21,7 +21,7 @@ namespace BookModel
         /// <param name="readerID"></param>
         /// <param name="borrowTime"></param>
         /// <param name="returnTime"></param>
-        public BookBorrowReturnInfoModel(string bookID, string readerID, DateTime borrowTime, DateTime returnTime)
+        public BookBorrowReturnInfo_Model(string bookID, string readerID, DateTime borrowTime, DateTime returnTime)
         {
             _bookID = bookID;
             _readerID = readerID;

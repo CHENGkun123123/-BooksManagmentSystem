@@ -17,7 +17,7 @@ namespace BookUI.ChildForm
         /// <summary>
         /// 图书信息业务类
         /// </summary>
-        BookInfoBLL bookInfoBLL = new BookInfoBLL(); 
+        BookInfo_BLL bookInfoBLL = new BookInfo_BLL();
 
         /// <summary>
         /// 默认构造
@@ -28,38 +28,7 @@ namespace BookUI.ChildForm
 
         }
 
-        /// <summary>
-        /// 图书添加按钮点击事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BookAddBtn_Click(object sender, EventArgs e)
-        {
-            //窗口显示
-            using (BookInfoAddAndUpd_Form add_Form = new BookInfoAddAndUpd_Form(this.BookAdd_Btn.Name, null))
-            {
-                add_Form.ShowDialog();
-            };
-            //刷新数据源
-            MyBookInfoDataSource(null);
-        }
-
-        /// <summary>
-        /// 页面加载时发生
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BookInfo_Control_Load(object sender, EventArgs e)
-        {
-            //生成数据源
-            MyBookInfoDataSource(null);
-            //生成表格按钮
-            MyDgvBtn();
-            //生成目录树
-            AddTvwNode();
-
-        }
-
+        #region 方法
         /// <summary>
         /// 创建父节点
         /// </summary>
@@ -83,7 +52,7 @@ namespace BookUI.ChildForm
                     this.BookCategory_tvw.Nodes[0].Nodes.Add(tn);
                 }
                 //创建子节点
-                NewNodes(dr, tn);
+                NewNode(dr, tn);
             }
             return treeNode;
         }
@@ -93,10 +62,10 @@ namespace BookUI.ChildForm
         /// </summary>
         /// <param name="dr"></param>
         /// <param name="tn"></param>
-        private static void NewNodes(DataRow dr, TreeNode tn)
+        private static void NewNode(DataRow dr, TreeNode tn)
         {
             //子节点数据循环
-            foreach (DataRow drr in new BookInfoBLL().FindCategory().Rows)
+            foreach (DataRow drr in new BookInfo_BLL().FindCategory().Rows)
             {
                 if (drr["ParentID"].ToString() == dr["CategoryID"].ToString())
                 {
@@ -129,34 +98,16 @@ namespace BookUI.ChildForm
             this.BookInfo_dgv.Columns.Add(delbtn);
         }
 
-
-
-
-        /// <summary>
-        /// 单击单元格内容时发生
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void BookInfo_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //获取用户点击的单元格行索引
-            int index = this.BookInfo_dgv.SelectedCells[0].RowIndex;
-            //获取当前行的id
-            int bookId = (int)this.BookInfo_dgv.Rows[index].Cells[2].Value;
-
-            IsDelOrUpd(bookId, this.BookInfo_dgv.Columns[e.ColumnIndex].Name);
-        }
-
         /// <summary>
         /// 判断执行删除还是修改方法
         /// </summary>
         /// <param name="e"></param>
         /// <param name="bookId"></param>
-        private void IsDelOrUpd(int bookId,string name)
+        private void IsDelOrUpd(int bookId, string name)
         {
             if (name == "Modify_btn")//修改按钮点击事件
             {
-                Func<BookInfoModel> _action = new Func<BookInfoModel>(UpdDefaultMes);
+                Func<BookInfo_Model> _action = new Func<BookInfo_Model>(UpdDefaultMes);
 
                 //窗口显示
                 using (BookInfoAddAndUpd_Form add_Form = new BookInfoAddAndUpd_Form(name, _action))
@@ -169,8 +120,8 @@ namespace BookUI.ChildForm
             else if (name == "del_btn")//删除按钮点击事件
             {
                 //执行删除
-                MessageEnum mes = bookInfoBLL.DelBook(bookId);
-                if (mes == MessageEnum.OK)
+                Message_Enum mes = bookInfoBLL.DelBook(bookId);
+                if (mes == Message_Enum.OK)
                 {
                     MessageBox.Show(EnumHelper.GetDescription(mes));
                 }
@@ -179,14 +130,12 @@ namespace BookUI.ChildForm
             }
         }
 
-
-
         /// <summary>
         /// 获取选中图书的默认参数
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        private BookInfoModel UpdDefaultMes()
+        private BookInfo_Model UpdDefaultMes()
         {
             //获取用户点击的单元格行索引
             int index = this.BookInfo_dgv.SelectedCells[0].RowIndex;
@@ -198,7 +147,7 @@ namespace BookUI.ChildForm
             string BookAuthor = this.BookInfo_dgv.Rows[index].Cells["图书作者"].Value.ToString();
             int bookCategory = (int)this.BookInfo_dgv.Rows[index].Cells["图书类别id"].Value;
 
-            BookInfoModel model = new BookInfoModel(bookId, bookName, BookAuthor, price, bookCategory);
+            BookInfo_Model model = new BookInfo_Model(bookId, bookName, BookAuthor, price, bookCategory);
             return model;
         }
 
@@ -212,7 +161,55 @@ namespace BookUI.ChildForm
             //隐藏
             this.BookInfo_dgv.Columns["图书类别id"].Visible = false;
         }
+        #endregion
 
+        #region 事件
+        /// <summary>
+        /// 图书添加按钮点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BookAddBtn_Click(object sender, EventArgs e)
+        {
+            //窗口显示
+            using (BookInfoAddAndUpd_Form add_Form = new BookInfoAddAndUpd_Form(this.BookAdd_Btn.Name, null))
+            {
+                add_Form.ShowDialog();
+            };
+            //刷新数据源
+            MyBookInfoDataSource(null);
+        }
+        
+        /// <summary>
+        /// 页面加载时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BookInfo_Control_Load(object sender, EventArgs e)
+        {
+            //生成数据源
+            MyBookInfoDataSource(null);
+            //生成表格按钮
+            MyDgvBtn();
+            //生成目录树
+            AddTvwNode();
+
+        }
+        /// <summary>
+        /// 单击单元格内容时发生
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BookInfo_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //获取用户点击的单元格行索引
+            int index = this.BookInfo_dgv.SelectedCells[0].RowIndex;
+            //获取当前行的id
+            int bookId = (int)this.BookInfo_dgv.Rows[index].Cells[2].Value;
+
+            IsDelOrUpd(bookId, this.BookInfo_dgv.Columns[e.ColumnIndex].Name);
+        }  
+        
         /// <summary>
         /// 双击节点事件
         /// </summary>
@@ -222,8 +219,8 @@ namespace BookUI.ChildForm
         {
             string categoryType = e.Node.Name;
             MyBookInfoDataSource(categoryType);
-        }
-
+        } 
+        
         /// <summary>
         /// 搜索按钮点击事件
         /// </summary>
@@ -237,5 +234,6 @@ namespace BookUI.ChildForm
                 this.BookInfo_dgv.DataSource = bookInfoBLL.FindBook(this.BookSearch_tb.Text);
             }
         }
+        #endregion
     }
 }

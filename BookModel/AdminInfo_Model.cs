@@ -3,10 +3,10 @@
     /// <summary>
     /// 管理员信息表实体类
     /// </summary>
-    public class AdminInfoModel : BaseModel
+    public class AdminInfo_Model : Base_Model
     {
         //默认构造方法
-        public AdminInfoModel()
+        public AdminInfo_Model()
         {
 
         }
@@ -15,7 +15,7 @@
         /// </summary>
         /// <param name="adminID"></param>
         /// <param name="adminPwd"></param>
-        public AdminInfoModel(string adminID, string adminPwd)
+        public AdminInfo_Model(string adminID, string adminPwd)
         {
             _adminID = adminID;
             _adminPwd = adminPwd;
